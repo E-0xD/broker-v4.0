@@ -1,0 +1,53 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 19 Sep 2025 16:01:09 at https://swyftmarkets.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://swyftmarkets.com/ -O1 "C:\xampp\htdocs\httracks\EDU_broker" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+16:02:58	Error: 	"Not Found" (404) at link https://swyftmarkets.com/swyftmarkets.com/app/account/login.php (from https://swyftmarkets.com/)
+16:02:58	Error: 	"Not Found" (404) at link https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/images/backgrounds/divider-icon.svg (from https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikit.css?ver=3.13.1)
+16:02:58	Error: 	"Not Found" (404) at link https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/images/backgrounds/list-bullet.svg (from https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikit.css?ver=3.13.1)
+16:02:58	Error: 	"Not Found" (404) at link https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/images/backgrounds/form-select.svg (from https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikit.css?ver=3.13.1)
+16:02:58	Error: 	"Not Found" (404) at link https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/images/backgrounds/form-datalist.svg (from https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikit.css?ver=3.13.1)
+16:02:58	Error: 	"Not Found" (404) at link https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/images/backgrounds/form-radio.svg (from https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikit.css?ver=3.13.1)
+16:02:59	Error: 	"Not Found" (404) at link https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/images/backgrounds/form-checkbox.svg (from https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikit.css?ver=3.13.1)
+16:02:59	Error: 	"Not Found" (404) at link https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/images/backgrounds/form-checkbox-indeterminate.svg (from https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikit.css?ver=3.13.1)
+16:02:59	Error: 	"Not Found" (404) at link https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/images/backgrounds/nav-parent-close.svg (from https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikit.css?ver=3.13.1)
+16:02:59	Error: 	"Not Found" (404) at link https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/images/backgrounds/nav-parent-open.svg (from https://swyftmarkets.com/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikit.css?ver=3.13.1)
+16:03:01	Error: 	"Not Found" (404) at link https://swyftmarkets.com/wp-content/plugins/uicore-framework/assets/css/img/select-arrow.svg (from https://swyftmarkets.com/wp-content/uploads/uicore-global.css?ver=8863)
+16:03:07	Warning: 	Moved Permanently for https://swyftmarkets.com/?p=241
+16:03:07	Warning: 	File has moved from https://swyftmarkets.com/?p=241 to https://swyftmarkets.com/about-us/
+16:03:07	Error: 	"Not Found" (404) at link https://swyftmarkets.com/about-us/swyftmarkets.com/app/account/login.php (from https://swyftmarkets.com/about-us/)
+16:03:07	Warning: 	Moved Permanently for https://swyftmarkets.com/?p=236
+16:03:07	Warning: 	File has moved from https://swyftmarkets.com/?p=236 to https://swyftmarkets.com/plans/
+16:03:07	Error: 	"Not Found" (404) at link https://swyftmarkets.com/user/register (from https://swyftmarkets.com/plans/)
+16:03:07	Error: 	"Not Found" (404) at link https://swyftmarkets.com/plans/swyftmarkets.com/app/account/login.php (from https://swyftmarkets.com/plans/)
+16:03:07	Warning: 	Moved Permanently for https://swyftmarkets.com/?p=333
+16:03:07	Warning: 	File has moved from https://swyftmarkets.com/?p=333 to https://swyftmarkets.com/faq/
+16:03:07	Error: 	"Not Found" (404) at link https://swyftmarkets.com/faq/swyftmarkets.com/app/account/login.php (from https://swyftmarkets.com/faq/)
+16:03:07	Warning: 	Moved Permanently for https://swyftmarkets.com/?p=373
+16:03:07	Warning: 	File has moved from https://swyftmarkets.com/?p=373 to https://swyftmarkets.com/contact-us/
+16:03:07	Error: 	"Not Found" (404) at link https://swyftmarkets.com/contact-us/swyftmarkets.com/app/account/login.php (from https://swyftmarkets.com/contact-us/)
+16:03:29	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/asset/img/logo.png (from https://swyftmarkets.com/app/account/register.php)
+16:03:29	Error: 	"Not Found" (404) at link swyftmarkets.com/app/account/assets/css/css/7e73653276d97473.css (from swyftmarkets.com/app/account/login.php)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/_next/static/images/corner.png (from https://swyftmarkets.com/app/account/assets/css/custom.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/assets/images/corner.png (from https://swyftmarkets.com/app/account/assets/css/custom.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/avatar-placeholder.796725e9.png (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/crm-base-font.9f525a54.eot (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/crm-base-font.9f525a54d41d.eot? (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/crm-base-font.5164d71b.woff (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/crm-base-font.b6de173e.ttf (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/crm-base-font.c38ede78.svg (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/fontawesome-webfont.2b13baa7.eot (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/fontawesome-webfont.2b13baa7d41d.eot? (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/fontawesome-webfont.e9955780.woff2 (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/fontawesome-webfont.cf011583.woff (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/fontawesome-webfont.8a7cb27d.ttf (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link https://swyftmarkets.com/app/account/assets/media/fontawesome-webfont.da909aa0.svg (from https://swyftmarkets.com/app/account/assets/css/7e73653276d97473.css)
+16:03:35	Error: 	"Not Found" (404) at link swyftmarkets.com/app/account/asset/css/7e73653276d97473.css (from swyftmarkets.com/app/account/reset.php)
+16:03:35	Error: 	"Not Found" (404) at link swyftmarkets.com/app/account/login.html (from swyftmarkets.com/app/account/reset.php)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 26 seconds : 198 links scanned, 158 files written (11312825 bytes overall) [5179292 bytes received at 35474 bytes/sec], 10167116 bytes transferred using HTTP compression in 159 files, ratio 27%, 6.1 requests per connection
+(34 errors, 8 warnings, 0 messages)
