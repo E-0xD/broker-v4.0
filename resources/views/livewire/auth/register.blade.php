@@ -1,62 +1,63 @@
-<div class="flex flex-col gap-6">
-    <x-auth-header :title="__('Create an account')" :description="__('Enter your details below to create your account')" />
+<div class="login-section bg--black-two">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-xl-10">
+                <div class="login-content-box">
+                    <div class="login-img-box order-lg-1">
+                        <div class="text-center">
+                            <span>Sign Up Your Account</span>
+                            <h3>Welcome To XTrady</h3>
+                            <a href="{{ route('register') }}" class="btn btn--base">
+                                Back To Home
+                                <i class="flaticon-arrow-upper-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <form method="POST" wire:submit="register">
+                        <div class="row row-gap-4">
+                            <div class="col-12">
+                                <input type="text" wire:model="name" class="form-control"
+                                    placeholder="Your Full Name*">
+                                @error('name')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
 
-    <!-- Session Status -->
-    <x-auth-session-status class="text-center" :status="session('status')" />
+                            </div>
+                            <div class="col-12">
+                                <input type="email" wire:model="email" class="form-control"
+                                    placeholder="Enter E-Mail*">
+                                @error('email')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="password" wire:model="password" class="form-control"
+                                    placeholder="Password*" >
+                                @error('password')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="password" wire:model="password_confirmation" class="form-control"
+                                    placeholder="Confirm Password*" >
+                            </div>
+                           
+                            <div class="col-12">
+                                <div class="submit-button">
+                                    <button type="submit" class="btn btn--base-two w-100">
+                                        Sign Up
+                                        <i class="flaticon-arrow-upper-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
-    <form method="POST" wire:submit="register" class="flex flex-col gap-6">
-        <!-- Name -->
-        <flux:input
-            wire:model="name"
-            :label="__('Name')"
-            type="text"
-            required
-            autofocus
-            autocomplete="name"
-            :placeholder="__('Full name')"
-        />
-
-        <!-- Email Address -->
-        <flux:input
-            wire:model="email"
-            :label="__('Email address')"
-            type="email"
-            required
-            autocomplete="email"
-            placeholder="email@example.com"
-        />
-
-        <!-- Password -->
-        <flux:input
-            wire:model="password"
-            :label="__('Password')"
-            type="password"
-            required
-            autocomplete="new-password"
-            :placeholder="__('Password')"
-            viewable
-        />
-
-        <!-- Confirm Password -->
-        <flux:input
-            wire:model="password_confirmation"
-            :label="__('Confirm password')"
-            type="password"
-            required
-            autocomplete="new-password"
-            :placeholder="__('Confirm password')"
-            viewable
-        />
-
-        <div class="flex items-center justify-end">
-            <flux:button type="submit" variant="primary" class="w-full">
-                {{ __('Create account') }}
-            </flux:button>
+                        <p class="text-center">Already have an account?
+                            <a href="{{ route('login') }}" class="text--base">Login</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
         </div>
-    </form>
-
-    <div class="space-x-1 rtl:space-x-reverse text-center text-sm text-zinc-600 dark:text-zinc-400">
-        <span>{{ __('Already have an account?') }}</span>
-        <flux:link :href="route('login')" wire:navigate>{{ __('Log in') }}</flux:link>
     </div>
 </div>

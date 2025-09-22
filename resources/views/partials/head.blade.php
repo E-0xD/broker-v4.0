@@ -1,14 +1,13 @@
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="XTrady – A modern and professional template for Forex and stock trading businesses.">
+ <meta name="keywords" content="Forex, Stock Broker, Trading Investments">
 
-<title>{{ $title ?? config('app.name') }}</title>
+ <!-- Title -->
+ <title>{{ config('app.name') }}</title>
+ <!-- Favicon -->
+ <link rel="shortcut icon" href="{{ asset('frontend/images/logo/favicon.ico') }}">
 
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-<link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-@fluxAppearance
+ @vite(['resources/css/app.css', 'resources/js/app.js'])
+ @fluxAppearance

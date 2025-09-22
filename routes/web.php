@@ -1,24 +1,17 @@
 <?php
 
-use App\Livewire\Settings\Appearance;
-use App\Livewire\Settings\Password;
-use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::view('/', 'frontend.welcome')->name('home');
+Route::view('about', 'frontend.about')->name('about');
+Route::view('contact', 'frontend.contact')->name('contact');
+Route::view('privacy-policy', 'frontend.privacy-policy')->name('privacy');
+Route::view('pricing', 'frontend.pricing')->name('pricing');
+Route::view('terms', 'frontend.terms')->name('terms');
+Route::view('faq', 'frontend.faq')->name('faq');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
 
-Route::middleware(['auth'])->group(function () {
-    Route::redirect('settings', 'settings/profile');
+require __DIR__ . '/auth.php';
+require __DIR__ . '/user.php';
 
-    Route::get('settings/profile', Profile::class)->name('settings.profile');
-    Route::get('settings/password', Password::class)->name('settings.password');
-    Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
-});
-
-require __DIR__.'/auth.php';
+Route::fallback(fn() => view('frontend.404'));
