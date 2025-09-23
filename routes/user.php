@@ -12,7 +12,7 @@ Route::view('deposit', 'dashboard.user.deposit')->middleware(['auth', 'verified'
 
 Route::view('withdraw', 'dashboard.user.withdraw')->middleware(['auth', 'verified'])->name('withdraw.create');
 
-Route::view('plan', 'dashboard.user.plan')->middleware(['auth', 'verified'])->name('plan');
+Route::view('plan', 'dashboard.user.plans')->middleware(['auth', 'verified'])->name('plan');
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
