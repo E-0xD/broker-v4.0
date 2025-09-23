@@ -1,11 +1,18 @@
 <?php
 
+use App\Http\Controllers\Dashboard\DashboardController;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 
-Route::view('dashboard', 'dashboard.user.dashboard')->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('board', DashboardController::class)->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::view('deposit', 'dashboard.user.deposit')->middleware(['auth', 'verified'])->name('deposit.create');
+
+Route::view('withdraw', 'dashboard.user.withdraw')->middleware(['auth', 'verified'])->name('withdraw.create');
+
+Route::view('plan', 'dashboard.user.plan')->middleware(['auth', 'verified'])->name('plan');
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');

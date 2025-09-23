@@ -11,7 +11,8 @@ Route::view('terms', 'frontend.terms')->name('terms');
 Route::view('faq', 'frontend.faq')->name('faq');
 
 
-require __DIR__ . '/auth.php';
 require __DIR__ . '/user.php';
+require __DIR__ . '/auth.php';
+
 
 Route::fallback(fn() => view('frontend.404'));
