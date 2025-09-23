@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\DepositController;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -8,7 +9,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('board', DashboardController::class)->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::view('deposit', 'dashboard.user.deposit')->middleware(['auth', 'verified'])->name('deposit.create');
+Route::get('deposit/callback', [DepositController::class, 'callback'])->name('deposit.callback');
+Route::resource('deposit', DepositController::class)->only(['index', 'create', 'store']);
 
 Route::view('withdraw', 'dashboard.user.withdraw')->middleware(['auth', 'verified'])->name('withdraw.create');
 

@@ -13,13 +13,17 @@
                         short text here
                     </p>
                     <div class="row">
-                        <form action="" method="post">
+                        <form action="{{ route('deposit.store') }}" method="post">
+                            @csrf
                             <div class="col-12">
                                 <h5 class="mb-3">Amount in USD</h5>
                                 <div class="form-floating mb-3">
-                                    <input type="number" class="form-control" id="floatingInput"
-                                        placeholder="name@example.com">
+                                    <input type="number" name="amount" class="form-control" id="floatingInput"
+                                        placeholder="1000000">
                                     <label for="floatingInput">Amount</label>
+                                    @error('amount')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
 
                             </div>

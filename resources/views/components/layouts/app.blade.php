@@ -70,6 +70,8 @@
         <!-- Wallet Dashboard js -->
         <script src="{{ asset('dashboard/js/pages/dashboard-wallet.js') }}"></script>
 
+        @include('sweetalert::alert')
+
     </body>
 
 </html>
