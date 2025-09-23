@@ -69,7 +69,7 @@ class DepositController extends Controller
         try {
             ['amount' => $amount] = $this->PaymentProcessor->validate($request);
 
-            User::where('id', Auth::id())->increment('balance', $amount);
+            Auth::user()->increment('balance', $amount);
 
             Alert::success('Success', 'Deposit Successful');
             

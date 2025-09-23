@@ -16,6 +16,8 @@ class Transaction extends Model
         'transaction_id',
         'status',
         'note',
+        'address',
+        'withdrawal_method'
     ];
 
     protected $casts = [

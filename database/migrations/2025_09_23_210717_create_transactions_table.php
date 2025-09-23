@@ -17,6 +17,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('type');  // Backed by TransactionType enum
             $table->decimal('amount', 15, 2);
+            $table->string('address')->nullable(); // used by withdrwal
+            $table->string('withdrawal_method')->nullable(); // used by withdrwal
             $table->string('status'); // Backed by TransactionStatus enum
             $table->text('note')->nullable();
             $table->timestamps();

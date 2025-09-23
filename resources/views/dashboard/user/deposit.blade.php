@@ -18,7 +18,7 @@
                             <div class="col-12">
                                 <h5 class="mb-3">Amount in USD</h5>
                                 <div class="form-floating mb-3">
-                                    <input type="number" name="amount" class="form-control" id="floatingInput"
+                                    <input value="{{old("amount")}}" type="number" name="amount" class="form-control" id="floatingInput"
                                         placeholder="1000000">
                                     <label for="floatingInput">Amount</label>
                                     @error('amount')

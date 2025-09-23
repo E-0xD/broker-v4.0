@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\DepositController;
+use App\Http\Controllers\Dashboard\WithdrawController;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -12,7 +13,7 @@ Route::get('board', DashboardController::class)->middleware(['auth', 'verified']
 Route::get('deposit/callback', [DepositController::class, 'callback'])->name('deposit.callback');
 Route::resource('deposit', DepositController::class)->only(['index', 'create', 'store']);
 
-Route::view('withdraw', 'dashboard.user.withdraw')->middleware(['auth', 'verified'])->name('withdraw.create');
+Route::resource('withdraw', WithdrawController::class)->only(['index', 'create', 'store']);
 
 Route::view('plan', 'dashboard.user.plans')->middleware(['auth', 'verified'])->name('plan');
 
