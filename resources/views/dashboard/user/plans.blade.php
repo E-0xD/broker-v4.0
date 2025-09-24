@@ -1,16 +1,16 @@
 <x-layouts.app>
 
-    <x-layouts.app.breadcrum title="Investment Plans" :breadcrums="['Investment', 'Plan']" />
+    <x-layouts.app.breadcrum title="Investment Opportunities" :breadcrums="['Investments', 'Investment Plans']" />
 
     <div class="row justify-content-center">
         <div class="col-xxl-9">
 
             <!-- Pricing Title-->
             <div class="text-center">
-                <h3 class="mb-2">Our Plans and Pricing</h3>
+                <h3 class="mb-2">Strategic Investment Plans</h3>
                 <p class="text-muted w-50 m-auto">
-                    We have plans and prices that fit your business perfectly. Make your client site a
-                    success with our products.
+                    Discover our carefully curated investment plans designed to maximize your returns while managing risk. 
+                    Choose the plan that aligns with your financial goals and investment strategy.
                 </p>
             </div>
 

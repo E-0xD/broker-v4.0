@@ -1,16 +1,16 @@
 <x-layouts.app>
-    <x-layouts.app.breadcrum title="Deposit" :breadcrums="['Deposit', 'Create']" />
+    <x-layouts.app.breadcrum title="Fund Your Account" :breadcrums="['Finances', 'Deposit Funds']" />
 
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-header border-bottom border-dashed d-flex align-items-center">
-                    <h4 class="header-title">Make a Deposit</h4>
+                    <h4 class="header-title">Secure Fund Deposit</h4>
                 </div>
 
                 <div class="card-body">
                     <p class="text-muted">
-                        short text here
+                        To begin trading and investing, please specify the amount you wish to deposit into your account. Your funds will be securely processed and credited to your balance immediately upon confirmation.
                     </p>
                     <div class="row">
                         <form action="{{ route('deposit.store') }}" method="post">

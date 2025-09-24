@@ -29,11 +29,11 @@ class WithdrawalRequest extends FormRequest
                 'required',
                 'numeric',
                 'min:1',
-                'max:' . Auth::user()->balance, 
+                'max:' . Auth::user()->balance,
             ],
             'crypto' => [
                 'required',
-                new Enum(WithdrawalOption::class), 
+                new Enum(WithdrawalOption::class),
             ],
             'address' => [
                 'required',

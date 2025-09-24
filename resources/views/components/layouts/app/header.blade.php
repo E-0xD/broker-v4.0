@@ -43,56 +43,43 @@
                     <div class="topbar-item nav-user">
                         <div class="dropdown">
                             <a class="topbar-link dropdown-toggle drop-arrow-none px-2" data-bs-toggle="dropdown" data-bs-offset="0,19" type="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="{{asset('dashboard/images/users/avatar-1.jpg')}}" width="32" class="rounded-circle me-lg-2 d-flex" alt="user-image">
+                                {{-- <img src="{{asset('dashboard/images/users/avatar-1.jpg')}}" width="32" class="rounded-circle me-lg-2 d-flex" alt="user-image"> --}}
                                 <span class="d-lg-flex flex-column gap-1 d-none">
-                                    <h5 class="my-0">Dhanoo K.</h5>
-                                    <h6 class="my-0 fw-normal">Premium</h6>
+                                     <h6 class="my-0 fw-normal">Welcome, </h6>
+                                    <h5 class="my-0">{{Auth::user()->name}}</h5>
+                                   
                                 </span>
                                 <i class="ti ti-chevron-down d-none d-lg-block align-middle ms-2"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <!-- item-->
-                                <div class="dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Welcome !</h6>
-                                </div>
+                               
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
+                                <a href="{{route('dashboard')}}" class="dropdown-item">
                                     <i class="ti ti-user-hexagon me-1 fs-17 align-middle"></i>
                                     <span class="align-middle">My Account</span>
                                 </a>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
+                                <a href="{{route('deposit.create')}}" class="dropdown-item">
                                     <i class="ti ti-wallet me-1 fs-17 align-middle"></i>
-                                    <span class="align-middle">Wallet : <span class="fw-semibold">$985.25</span></span>
+                                    <span class="align-middle">Wallet : <span class="fw-semibold">${{number_format(Auth::user()->balance)}}</span></span>
                                 </a>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
+                                <a href="{{route('settings.profile')}}" class="dropdown-item">
                                     <i class="ti ti-settings me-1 fs-17 align-middle"></i>
                                     <span class="align-middle">Settings</span>
                                 </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="ti ti-lifebuoy me-1 fs-17 align-middle"></i>
-                                    <span class="align-middle">Support</span>
-                                </a>
 
-                                <div class="dropdown-divider"></div>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="ti ti-lock-square-rounded me-1 fs-17 align-middle"></i>
-                                    <span class="align-middle">Lock Screen</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item active fw-semibold text-danger">
+                                <form href="{{route('logout')}}" class="dropdown-item active fw-semibold text-danger">
+                                    @csrf
                                     <i class="ti ti-logout me-1 fs-17 align-middle"></i>
-                                    <span class="align-middle">Sign Out</span>
-                                </a>
+                                    <button type="submit" class="align-middle">Sign Out</button>
+                                </form>
                             </div>
                         </div>
                     </div>

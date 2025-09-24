@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TransactionHistoryController extends Controller
 {
@@ -14,9 +15,16 @@ class TransactionHistoryController extends Controller
      */
     public function __invoke(Request $request)
     {
+        try {
 
-        $transactions = Auth::user()->transactions;
+            $transactions = Auth::user()->transactions;
 
-        return view('dashboard.user.transaction-history', compact('transactions'));
+            return view('dashboard.user.transaction-history', compact('transactions'));
+
+        } catch (\Throwable $th) {
+            Log::error($th);
+            Alert::error('Error', 'An Error Occurred');
+            return redirect()->route('dashboard');
+        }
     }
 }

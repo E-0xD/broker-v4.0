@@ -6,10 +6,10 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Transaction Id</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Amount</th>
-                        <th scope="col">Status</th>
+                        <th scope="col">TRANSACTION ID</th>
+                        <th scope="col">TYPE</th>
+                        <th scope="col">AMOUNT</th>
+                        <th scope="col">STATUS</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -17,9 +17,9 @@
                         <tr>
                             <th scope="row">{{ $transaction->transaction_id }}</th>
                             <td>{{ $transaction->type }}</td>
-                            <td>{{ $transaction->amount }}</td>
+                            <td>${{ number_format($transaction->amount) }}</td>
                             <td
-                                class="
+                                class=" rounded-pill
                                 @switch($transaction->status->value)
                                     @case('pending')
                                         bg-warning
