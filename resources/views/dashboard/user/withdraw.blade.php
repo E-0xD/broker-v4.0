@@ -1,17 +1,17 @@
 <x-layouts.app>
 
-    <x-layouts.app.breadcrum title="Withdrawal" :breadcrums="['Withdraw', 'Create']" />
+    <x-layouts.app.breadcrum title="Request Withdrawal" :breadcrums="['Finances', 'Withdraw Funds']" />
 
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-header border-bottom border-dashed d-flex align-items-center">
-                    <h4 class="header-title">Make a Withdrawal</h4>
+                    <h4 class="header-title">Secure Fund Withdrawal</h4>
                 </div>
 
                 <div class="card-body">
                     <p class="text-muted">
-                        Please fill out the form below to make a withdrawal.
+                        Complete the form below to initiate a secure withdrawal of your funds. Please ensure your wallet address is correct as transactions cannot be reversed once processed. Your withdrawal will be processed within 24 hours.
                     </p>
                     <div class="row">
                         <form action="{{ route('withdraw.store') }}" method="post">

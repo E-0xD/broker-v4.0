@@ -1,17 +1,17 @@
 <x-layouts.app>
 
-    <x-layouts.app.breadcrum title="Create Investment" :breadcrums="['Investment', 'Create']" />
+    <x-layouts.app.breadcrum title="Start Investing" :breadcrums="['Investments', 'New Investment']" />
 
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-header border-bottom border-dashed d-flex align-items-center">
-                    <h4 class="header-title">Make an investemnt</h4>
+                    <h4 class="header-title">Initialize Your Investment</h4>
                 </div>
 
                 <div class="card-body">
                     <p class="text-muted">
-                        Please fill out the form below to make an investment.
+                        Begin your investment journey by selecting your preferred investment plan and specifying your investment amount. Our platform ensures secure and efficient processing of your investment to maximize your potential returns.
                     </p>
                     <div class="row">
                         <form action="{{ route('investment.store') }}" method="post">
@@ -19,7 +19,7 @@
 
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <h5 class="">Cryptocurrency</h5>
+                                    <h5 class="">Investment Plan</h5>
                                     <select name="plan_id" class="form-control">
                                         @foreach ($plans as $plan)
                                             <option value="{{ $plan->id }}">
