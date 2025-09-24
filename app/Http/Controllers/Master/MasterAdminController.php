@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Enums\UserRole;
 use App\Enums\UserStatus;
+use App\Http\Requests\UpdateStatusRequest;
+use App\Http\Requests\UpdateUserRoleRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -36,14 +38,10 @@ class MasterAdminController extends Controller
         }
     }
 
-    public function updateRole(Request $request, User $admin)
+    public function updateRole(UpdateUserRoleRequest $request, User $admin)
     {
         try {
-            $validated = $request->validate([
-                'role' => ['required', 'string', 'in:' . UserRole::ADMIN->value . ',' . UserRole::USER->value]
-            ]);
-
-            $admin->update(['role' => $validated['role']]);
+            $admin->update(['role' => $request->role]);
             Alert::success('Success', 'Admin role updated successfully');
             return redirect()->route('master.admins.show', $admin);
         } catch (\Throwable $th) {
@@ -53,14 +51,10 @@ class MasterAdminController extends Controller
         }
     }
 
-    public function updateStatus(Request $request, User $admin)
+    public function updateStatus(UpdateStatusRequest $request, User $admin)
     {
         try {
-            $validated = $request->validate([
-                'status' => ['required', 'string', 'in:' . implode(',', array_column(UserStatus::cases(), 'value'))]
-            ]);
-
-            $admin->update(['status' => $validated['status']]);
+            $admin->update(['status' => $request->status]);
             Alert::success('Success', 'Admin status updated successfully');
             return redirect()->route('master.admins.show', $admin);
         } catch (\Throwable $th) {

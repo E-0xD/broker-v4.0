@@ -2,9 +2,10 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\UserRole;
 use Illuminate\Foundation\Http\FormRequest;
 
-class AddRoiRequest extends FormRequest
+class UpdateUserRoleRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +23,7 @@ class AddRoiRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'roi_amount' => 'required|numeric|min:0'
+            'role' => ['required', 'string', 'in:' . UserRole::ADMIN->value . ',' . UserRole::USER->value]
         ];
     }
 }

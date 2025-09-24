@@ -2,9 +2,10 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\UserStatus;
 use Illuminate\Foundation\Http\FormRequest;
 
-class AddRoiRequest extends FormRequest
+class UpdateStatusRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +23,7 @@ class AddRoiRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'roi_amount' => 'required|numeric|min:0'
+            'status' => ['required', 'string', 'in:' . implode(',', array_column(UserStatus::cases(), 'value'))]
         ];
     }
 }
