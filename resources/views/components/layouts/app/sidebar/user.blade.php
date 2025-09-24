@@ -7,7 +7,7 @@
 
 <li class="side-nav-item">
     <a href="{{ route('chart') }}" class="side-nav-link">
-        <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+        <span class="menu-icon"><i class="ti ti-chart-line"></i></span>
         <span class="menu-text"> Live Charts </span>
     </a>
 </li>
@@ -15,7 +15,7 @@
 <li class="side-nav-item">
     <a data-bs-toggle="collapse" href="#sidebarInvestment" aria-expanded="false" aria-controls="sidebarInvestment"
         class="side-nav-link">
-        <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
+        <span class="menu-icon"><i class="ti ti-coins"></i></span>
         <span class="menu-text">
             investment
         </span>
@@ -40,21 +40,21 @@
 
 <li class="side-nav-item">
     <a href="{{ route('deposit.create') }}" class="side-nav-link">
-        <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
+        <span class="menu-icon"><i class="ti ti-arrow-down-circle"></i></span>
         <span class="menu-text"> Deposit </span>
     </a>
 </li>
 
 <li class="side-nav-item">
     <a href="{{ route('withdraw.create') }}" class="side-nav-link">
-        <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
+        <span class="menu-icon"><i class="ti ti-arrow-up-circle"></i></span>
         <span class="menu-text"> Withdraw </span>
     </a>
 </li>
 
 <li class="side-nav-item">
     <a href="{{ route('transaction.history') }}" class="side-nav-link">
-        <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
+        <span class="menu-icon"><i class="ti ti-history"></i></span>
         <span class="menu-text"> Transaction History </span>
     </a>
 </li>
@@ -62,7 +62,7 @@
 <li class="side-nav-item">
     <a data-bs-toggle="collapse" href="#sidebarSettings" aria-expanded="false" aria-controls="sidebarSettings"
         class="side-nav-link">
-        <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
+        <span class="menu-icon"><i class="ti ti-settings"></i></span>
         <span class="menu-text">
             Settings
         </span>
