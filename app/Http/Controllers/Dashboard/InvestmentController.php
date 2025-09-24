@@ -10,6 +10,7 @@ use App\Models\Investment;
 use App\Models\Plan;
 use App\Models\Transaction;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class InvestmentController extends Controller
@@ -17,8 +18,14 @@ class InvestmentController extends Controller
 
     public function create()
     {
-        $plans = Plan::where('is_active', true)->get();
-        return view('dashboard.user.create-investment', compact('plans'));
+        try {
+            $plans = Plan::where('is_active', true)->get();
+            return view('dashboard.user.create-investment', compact('plans'));
+        } catch (\Throwable $th) {
+            Log::error($th);
+            Alert::error('Error', 'An Error Occurred');
+            return redirect()->route('dashboard');
+        }
     }
 
     public function closeAll()
@@ -51,6 +58,7 @@ class InvestmentController extends Controller
             Alert::success('Success', 'All investments have been closed and your capital has been returned');
             return redirect()->route('dashboard');
         } catch (\Throwable $th) {
+            Log::error($th);
             Alert::error('Error', 'An error occurred while closing investments');
             return redirect()->route('dashboard');
         }
@@ -89,13 +97,11 @@ class InvestmentController extends Controller
             return redirect()->route('dashboard');
             //code...
         } catch (\Throwable $th) {
+            Log::error($th);
             Alert::error('Error', 'An Error Occurred');
             return redirect()->route('dashboard');
         }
     }
-
-
-
 
 
     /**
@@ -103,34 +109,39 @@ class InvestmentController extends Controller
      */
     public function processEarnings()
     {
-        $activeInvestments = Investment::where('status', 'active')
-            ->where(function ($query) {
-                $query->whereNull('last_earning_date')
-                    ->orWhereDate('last_earning_date', '<', now()->toDateString());
-            })
-            ->get();
 
-        foreach ($activeInvestments as $investment) {
-            if ($investment->canEarnToday()) {
-                $earning = $investment->calculateDailyEarning();
+        try {
+            $activeInvestments = Investment::where('status', 'active')
+                ->where(function ($query) {
+                    $query->whereNull('last_earning_date')
+                        ->orWhereDate('last_earning_date', '<', now()->toDateString());
+                })
+                ->get();
 
-                $investment->update([
-                    'total_earned' => $investment->total_earned + $earning,
-                    'last_earning_date' => now(),
-                ]);
+            foreach ($activeInvestments as $investment) {
+                if ($investment->canEarnToday()) {
+                    $earning = $investment->calculateDailyEarning();
 
-                Transaction::create([
-                    'user_id' => $investment->user_id,
-                    'amount' => $earning,
-                    'transaction_id' => rand(1111111111, 999999999),
-                    'status' => TransactionStatus::COMPLETED,
-                    'type' => TransactionType::ROI,
-                ]);
+                    $investment->update([
+                        'total_earned' => $investment->total_earned + $earning,
+                        'last_earning_date' => now(),
+                    ]);
 
-                $investment->user->increment('balance', $earning);
+                    Transaction::create([
+                        'user_id' => $investment->user_id,
+                        'amount' => $earning,
+                        'transaction_id' => rand(1111111111, 999999999),
+                        'status' => TransactionStatus::COMPLETED,
+                        'type' => TransactionType::ROI,
+                    ]);
+
+                    $investment->user->increment('balance', $earning);
+                }
             }
-        }
 
-        return response()->json(['message' => 'Earnings processed successfully']);
+            return response()->json(['message' => 'Earnings processed successfully']);
+        } catch (\Throwable $th) {
+            Log::error($th);
+        }
     }
 }

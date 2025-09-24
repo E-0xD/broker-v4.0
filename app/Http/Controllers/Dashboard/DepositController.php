@@ -7,9 +7,9 @@ use App\Enums\TransactionType;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Payment\PaymentProcessorController;
 use App\Http\Requests\DepositRequest;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class DepositController extends Controller
@@ -20,14 +20,6 @@ class DepositController extends Controller
     public function __construct()
     {
         $this->PaymentProcessor = new PaymentProcessorController();
-    }
-
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
     }
 
     /**
@@ -43,7 +35,6 @@ class DepositController extends Controller
      */
     public function store(DepositRequest $request)
     {
-
         try {
             ['redirectUrl' => $redirectUrl] = $this->PaymentProcessor->create([
                 'amount' => $request->amount,
@@ -58,6 +49,7 @@ class DepositController extends Controller
 
             return redirect($redirectUrl);
         } catch (\Throwable $th) {
+            Log::error($th);
             return redirect()->route('deposit.create');
         }
     }
@@ -65,17 +57,16 @@ class DepositController extends Controller
 
     public function callback(Request $request)
     {
-
         try {
             ['amount' => $amount] = $this->PaymentProcessor->validate($request);
 
             Auth::user()->increment('balance', $amount);
 
             Alert::success('Success', 'Deposit Successful');
-            
-            return redirect()->route('dashboard');
 
+            return redirect()->route('dashboard');
         } catch (\Throwable $th) {
+            Log::error($th);
             return redirect()->route('deposit.create');
         }
     }

@@ -16,15 +16,15 @@ Route::prefix('user')->middleware(['auth'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('deposit/callback', [DepositController::class, 'callback'])->name('deposit.callback');
-    Route::resource('deposit', DepositController::class)->only(['index', 'create', 'store']);
+    Route::resource('deposit', DepositController::class)->only(['create', 'store']);
 
-    Route::resource('withdraw', WithdrawController::class)->only(['index', 'create', 'store']);
+    Route::resource('withdraw', WithdrawController::class)->only(['create', 'store']);
 
     Route::get('transaction/history', TransactionHistoryController::class)->name('transaction.history');
 
     Route::get('plan', PlanController::class)->name('plan');
 
-    Route::resource('investment', InvestmentController::class);
+    Route::resource('investment', InvestmentController::class)->only(['create', 'store']);
     Route::post('investments/close-all', [InvestmentController::class, 'closeAll'])->name('investments.close-all');
 
     Route::view('charts', 'dashboard.user.chart')->name('chart');
