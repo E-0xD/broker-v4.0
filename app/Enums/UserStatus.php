@@ -15,8 +15,4 @@ enum UserStatus: string
         };
     }
 
-    public function canLogin(): bool
-    {
-        return $this === self::ACTIVE;
-    }
 }

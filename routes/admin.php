@@ -5,7 +5,7 @@ use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminInvestmentController;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::middleware(['auth', 'check.status', 'admin'])->prefix('admin')->name('admin.')->group(function () {
 
     // Plan Management Routes
     Route::group(['prefix' => 'plans', 'as' => 'plans.'], function () {
