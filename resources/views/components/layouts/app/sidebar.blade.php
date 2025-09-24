@@ -52,6 +52,13 @@
                   </a>
               </li>
 
+               <li class="side-nav-item">
+                  <a href="{{route('transaction.history')}}" class="side-nav-link">
+                      <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
+                      <span class="menu-text"> Transaction History </span>
+                  </a>
+              </li>
+
           </ul>
 
           <div class="clearfix"></div>
