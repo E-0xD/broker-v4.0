@@ -24,7 +24,7 @@
         <div class="wrapper">
 
             <!-- Sidenav Menu Start -->
-            <x-layouts.app.admin-sidebar />
+            <x-layouts.app.sidebar />
             <!-- Sidenav Menu End -->
 
             <!-- Topbar Start -->

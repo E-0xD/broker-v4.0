@@ -14,6 +14,7 @@ Route::view('faq', 'frontend.faq')->name('faq');
 require __DIR__ . '/user.php';
 require __DIR__ . '/admin.php';
 require __DIR__ . '/auth.php';
+require __DIR__ . '/master.php';
 
 
 Route::fallback(fn() => view('frontend.404'));
