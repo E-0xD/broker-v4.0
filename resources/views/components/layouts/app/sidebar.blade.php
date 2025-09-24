@@ -30,6 +30,13 @@
                   </a>
               </li>
 
+                 <li class="side-nav-item">
+                  <a href="{{ route('chart') }}" class="side-nav-link">
+                      <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                      <span class="menu-text"> Live Charts </span>
+                  </a>
+              </li>
+
               <li class="side-nav-item">
                   <a data-bs-toggle="collapse" href="#sidebarHospital" aria-expanded="false"
                       aria-controls="sidebarHospital" class="side-nav-link">
