@@ -45,7 +45,16 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'balance' => 'decimal:2',
         ];
+    }
+
+    /**
+     * Get all investments for the user
+     */
+    public function investments(): HasMany
+    {
+        return $this->hasMany(Investment::class);
     }
 
     /**

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\DepositController;
+use App\Http\Controllers\Dashboard\InvestmentController;
+use App\Http\Controllers\Dashboard\PlanController;
 use App\Http\Controllers\Dashboard\TransactionHistoryController;
 use App\Http\Controllers\Dashboard\WithdrawController;
 use App\Livewire\Settings\Appearance;
@@ -18,7 +20,9 @@ Route::resource('withdraw', WithdrawController::class)->only(['index', 'create',
 
 Route::get('transaction/history', TransactionHistoryController::class)->name('transaction.history');
 
-Route::view('plan', 'dashboard.user.plans')->middleware(['auth', 'verified'])->name('plan');
+Route::get('plan', PlanController::class)->name('plan');
+
+Route::resource('investment', InvestmentController::class);
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
