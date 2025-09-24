@@ -11,7 +11,7 @@ use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 
-Route::get('board', DashboardController::class)->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('board', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('deposit/callback', [DepositController::class, 'callback'])->name('deposit.callback');
 Route::resource('deposit', DepositController::class)->only(['index', 'create', 'store']);
@@ -23,6 +23,7 @@ Route::get('transaction/history', TransactionHistoryController::class)->name('tr
 Route::get('plan', PlanController::class)->name('plan');
 
 Route::resource('investment', InvestmentController::class);
+Route::post('investments/close-all', [InvestmentController::class, 'closeAll'])->name('investments.close-all');
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
