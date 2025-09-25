@@ -7,6 +7,7 @@ use App\Enums\TransactionType;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Payment\PaymentProcessorController;
 use App\Http\Requests\DepositRequest;
+use App\Models\DepositSetting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -27,7 +28,8 @@ class DepositController extends Controller
      */
     public function create()
     {
-        return view('dashboard.user.deposit');
+        $depositSettings = DepositSetting::first();
+        return view('dashboard.user.deposit', compact('depositSettings'));
     }
 
     /**

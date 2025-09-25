@@ -95,7 +95,7 @@ class InvestmentController extends Controller
 
             Alert::success('Success', 'Investment created successfully');
             return redirect()->route('dashboard');
-            //code...
+          
         } catch (\Throwable $th) {
             Log::error($th);
             Alert::error('Error', 'An Error Occurred');

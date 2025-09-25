@@ -23,7 +23,7 @@
     <body>
 
         <!--==========================   Preloader Start  ==========================-->
-        <x-layouts.guest.preloader />
+        {{-- <x-layouts.guest.preloader /> --}}
         <!--==========================  Preloader End  ==========================-->
 
         <div class="wrapper">

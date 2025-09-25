@@ -20,6 +20,13 @@
      </a>
  </li>
 
+  <li class="side-nav-item">
+     <a href="{{ route('admin.deposits.manual.index') }}" class="side-nav-link">
+         <span class="menu-icon"><i class="ti ti-cash"></i></span>
+         <span class="menu-text">Deposit Management</span>
+     </a>
+ </li>
+
  <li class="side-nav-item">
      <a href="{{ route('admin.investments.index') }}" class="side-nav-link">
          <span class="menu-icon"><i class="ti ti-cash"></i></span>
