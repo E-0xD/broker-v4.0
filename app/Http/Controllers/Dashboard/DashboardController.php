@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\Investment;
 use App\Models\Transaction;
+use App\Models\Trade;
 use App\Enums\TransactionType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,6 +27,8 @@ class DashboardController extends Controller
             $totalDailyRoi = $investments->where('status', 'active')->sum('daily_earning');
             $lifetimeProfit = $investments->sum('total_earned');
 
+            $totalActiveTrades = $user->trades->sum('amount');
+
             $chartData = $this->chartData($user->id);
 
             return view('dashboard.user.dashboard', compact(
@@ -34,9 +37,11 @@ class DashboardController extends Controller
                 'totalInvestment',
                 'totalDailyRoi',
                 'lifetimeProfit',
-                'chartData'
+                'chartData',
+                'totalActiveTrades'
             ));
         } catch (\Throwable $th) {
+            dd($th);
             Log::error($th);
             Alert::error('Error', 'An Error Occurred');
             return redirect()->route('home');

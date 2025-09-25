@@ -21,7 +21,7 @@ class Register extends Component
     public string $password_confirmation = '';
     public string $country = '';
     public string $phone = '';
-    // public string $currency = 'USD';
+    public string $currency = 'USD';
     public string $account_type = 'standard';
     public string $trading_platform = 'MT4';
 
@@ -36,7 +36,7 @@ class Register extends Component
             'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
             'country' => ['required', 'string', new Enum(Country::class)],
             'phone' => ['required', 'string', 'regex:/^\+?[1-9]\d{1,14}$/'],
-            // 'currency' => ['required', 'string', 'in:USD,EUR,GBP'],
+            'currency' => ['required', 'string', 'in:USD,EUR,GBP'],
             'account_type' => ['required', 'string', 'in:standard,premium,vip'],
             'trading_platform' => ['required', 'string', 'in:MT4,MT5'],
         ]);

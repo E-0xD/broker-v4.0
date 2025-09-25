@@ -2,7 +2,7 @@
             <nav class="navbar navbar-expand-lg navbar-main">
                 <div class="container">
                     <a class="navbar-brand" href="index-2.html">
-                        <img src="{{asset('frontend/images/logo/logo.svg')}}" alt="logo" class="logo-img">
+                        <img src="{{asset(config('app.logo'))}}" width="100" alt="logo" class="logo-img">
                     </a>
                     <div class="right-nav">
                         <a href="{{route('login')}}" class="btn btn-outline--base d-none d-sm-block">
@@ -22,13 +22,14 @@
                             </svg>
                         </button>
 
+                                <div id="google_translate_element"></div>
                     </div>
 
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                                <img src="{{asset('frontend/images/logo/logo.svg')}}" alt="logo" class="logo-img">
+                                <img src="{{asset(config('app.logo'))}}" alt="logo" class="logo-img">
                             </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>

@@ -10,13 +10,13 @@
                 <div class="col-lg-5 order-1 order-lg-0">
                     <div class="contact-info">
                         <h3 class="mb-1">Contact Information</h3>
-                        <p>For Business Plan Submissions. Please submit using this</p>
+                        <p>For Inquiries regarding our services. Please submit using this</p>
                         <ul class="d-grid gap-3 mt-4 pt-lg-3">
                             <li class="d-flex gap-2">
                                 <div class="icon">
                                     <i class="fa-solid fa-phone-volume"></i>
                                 </div>
-                                <p><a href="tel:+8243944562">(+1) 824 394 4562</a></p>
+                                <p><a href="tel:{{ config('app.phone') }}">{{ config('app.phone') }}</a></p>
                             </li>
                             <li class="d-flex gap-2">
                                 <div class="icon">
@@ -29,20 +29,11 @@
                                 <div class="icon">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
-                                <p>New Street 243 West Victoria Vip Road 3527 Canada</p>
+                                <p>{{ config('app.address') }}</p>
                             </li>
                         </ul>
-                        <h3 class="mb-1 mt-4 pt-lg-4">Social Media Links</h3>
-                        <ul class="social-icon">
-                            <li><a href="https://www.facebook.com/" target="_blank"><i
-                                        class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank"><i
-                                        class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="https://www.linkedin.com/" target="_blank"><i
-                                        class="fa-brands fa-linkedin-in"></i></a></li>
-                            <li><a href="https://www.twitter.com/" target="_blank"><i
-                                        class="fa-brands fa-x-twitter"></i></a></li>
-                        </ul>
+                       
+                        
                     </div>
                 </div>
                 <div class="col-lg-7">

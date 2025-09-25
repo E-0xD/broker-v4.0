@@ -62,7 +62,7 @@
                                 @enderror
                             </div>
 
-                            {{-- <div class="col-sm-4">
+                            <div class="col-sm-4">
                                 <select wire:model="currency" class="form-control">
                                     <option value="USD">USD</option>
                                     <option value="EUR">EUR</option>
@@ -71,10 +71,10 @@
                                 @error('currency')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
-                            </div> --}}
+                            </div>
 
-                            <div class="col-sm-4">
-                                <select wire:model="account_type" class="form-control">
+                            <div class="col-12">
+                                <select wire:model="account_type" class="w-100 form-control">
                                     <option value="standard">Standard Account</option>
                                     <option value="premium">Premium Account</option>
                                     <option value="vip">VIP Account</option>
@@ -84,8 +84,8 @@
                                 @enderror
                             </div>
 
-                            <div class="col-sm-4">
-                                <select wire:model="trading_platform" class="form-control">
+                            <div class="col-12">
+                                <select wire:model="trading_platform" class="w-100 form-control">
                                     <option value="MT4">MetaTrader 4</option>
                                     <option value="MT5">MetaTrader 5</option>
                                 </select>

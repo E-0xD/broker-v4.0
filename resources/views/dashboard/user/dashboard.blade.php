@@ -3,7 +3,7 @@
     <x-layouts.app.breadcrum title="Dashboard" />
 
     <div class="row">
-        <div class="col-xxl-9">
+        <div class="col-12">
             <div class="row">
                 <div class="col-xl-4">
                     <div class="card">
@@ -13,7 +13,7 @@
                         </div>
 
                         <div class="card-body pt-0">
-                            <h2 class="fw-bold">{{Auth::user()->currency . ' ' . number_format($user->balance) }}</h2>
+                            <h2 class="fw-bold">{{ Auth::user()->currency . ' ' . number_format($user->balance) }}</h2>
 
                             <div class="row g-2 mt-2 pt-1">
                                 <div class="col">
@@ -37,7 +37,8 @@
                         </div>
 
                         <div class="card-body pt-0">
-                            <h2 class="fw-bold">{{Auth::user()->currency . ' ' .number_format($totalActiveInvestment, 2) }}</h2>
+                            <h2 class="fw-bold">
+                                {{ Auth::user()->currency . ' ' . number_format($totalActiveInvestment, 2) }}</h2>
 
                             <div class="row g-2 mt-2 pt-1">
                                 <div class="col">
@@ -54,6 +55,32 @@
                                         </form>
                                     </div>
                                 @endif
+
+                            </div>
+                        </div> <!-- end card-body -->
+                    </div> <!-- end card -->
+                </div> <!-- end col -->
+
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="d-flex card-header justify-content-between align-items-center">
+                            <h4 class="header-title">Total Active Trades</h4>
+
+                        </div>
+
+                        <div class="card-body pt-0">
+                            <h2 class="fw-bold">
+                                {{ Auth::user()->currency . ' ' . number_format($totalActiveTrades, 2) }}</h2>
+
+                            <div class="row g-2 mt-2 pt-1">
+                                <div class="col-6">
+                                    <a href="{{ route('trading') }}" class="btn btn-primary w-100">
+                                        Buy</a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="{{ route('trading') }}" class="btn btn-danger w-100">
+                                        Sell</a>
+                                </div>
 
                             </div>
                         </div> <!-- end card-body -->
@@ -77,25 +104,28 @@
                                         <p class="text-muted mt-3 mb-1">Total Active Investment</p>
                                         <h4 class="mb-3">
                                             <span
-                                                class="fw-semibold">{{Auth::user()->currency . ' ' . number_format($totalActiveInvestment, 2) }}</span>
+                                                class="fw-semibold">{{ Auth::user()->currency . ' ' . number_format($totalActiveInvestment, 2) }}</span>
                                         </h4>
                                     </div>
                                     <div class="col-md col-6">
                                         <p class="text-muted mt-3 mb-1">Total Investment</p>
                                         <h4 class="mb-3">
-                                            <span class="fw-semibold">{{Auth::user()->currency . ' ' . number_format($totalInvestment, 2) }}</span>
+                                            <span
+                                                class="fw-semibold">{{ Auth::user()->currency . ' ' . number_format($totalInvestment, 2) }}</span>
                                         </h4>
                                     </div>
                                     <div class="col-md col-6">
                                         <p class="text-muted mt-3 mb-1">Daily ROI</p>
                                         <h4 class="mb-3">
-                                            <span class="fw-semibold">{{Auth::user()->currency . ' ' . number_format($totalDailyRoi, 2) }}</span>
+                                            <span
+                                                class="fw-semibold">{{ Auth::user()->currency . ' ' . number_format($totalDailyRoi, 2) }}</span>
                                         </h4>
                                     </div>
                                     <div class="col-md col-6">
                                         <p class="text-muted mt-3 mb-1">Lifetime Profit</p>
                                         <h4 class="mb-3">
-                                            <span class="fw-semibold">{{Auth::user()->currency . ' ' . number_format($lifetimeProfit, 2) }}</span>
+                                            <span
+                                                class="fw-semibold">{{ Auth::user()->currency . ' ' . number_format($lifetimeProfit, 2) }}</span>
                                         </h4>
                                     </div>
                                 </div>
@@ -107,6 +137,74 @@
                             </div>
                             <script>
                                 var chartData = @json($chartData);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Forex Chart -->
+                    <div class="mb-4">
+                        <h5 class="mb-2">Live Forex Chart</h5>
+                        <div class="tradingview-widget-container">
+                            <div id="forex_chart"></div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                            <script type="text/javascript">
+                                new TradingView.widget({
+                                    "width": "100%",
+                                    "height": 400,
+                                    "symbol": "FX:EURUSD",
+                                    "interval": "30",
+                                    "timezone": "Etc/UTC",
+                                    "theme": "light",
+                                    "style": "1",
+                                    "locale": "en",
+                                    "container_id": "forex_chart"
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Crypto Chart -->
+                    <div class="mb-4">
+                        <h5 class="mb-2">Live Crypto Chart</h5>
+                        <div class="tradingview-widget-container">
+                            <div id="crypto_chart"></div>
+                            <script type="text/javascript">
+                                new TradingView.widget({
+                                    "width": "100%",
+                                    "height": 400,
+                                    "symbol": "BINANCE:BTCUSDT",
+                                    "interval": "30",
+                                    "timezone": "Etc/UTC",
+                                    "theme": "light",
+                                    "style": "1",
+                                    "locale": "en",
+                                    "container_id": "crypto_chart"
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Stocks Chart -->
+                    <div class="mb-4">
+                        <h5 class="mb-2">Live Stocks Chart</h5>
+                        <div class="tradingview-widget-container">
+                            <div id="stocks_chart"></div>
+                            <script type="text/javascript">
+                                new TradingView.widget({
+                                    "width": "100%",
+                                    "height": 400,
+                                    "symbol": "NASDAQ:AAPL",
+                                    "interval": "30",
+                                    "timezone": "Etc/UTC",
+                                    "theme": "light",
+                                    "style": "1",
+                                    "locale": "en",
+                                    "container_id": "stocks_chart"
+                                });
                             </script>
                         </div>
                     </div>
@@ -125,23 +223,23 @@
                             <div class="tradingview-widget-container">
                                 <div class="tradingview-widget-container__widget"></div>
                                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
-                                {
-                                    "width": "100%",
-                                    "height": "400",
-                                    "currencies": [
-                                        "EUR",
-                                        "USD",
-                                        "JPY",
-                                        "GBP",
-                                        "CHF",
-                                        "AUD",
-                                        "CAD",
-                                        "NZD"
-                                    ],
-                                    "isTransparent": false,
-                                    "colorTheme": "dark",
-                                    "locale": "en"
-                                }
+                                    {
+                                        "width": "100%",
+                                        "height": "400",
+                                        "currencies": [
+                                            "EUR",
+                                            "USD",
+                                            "JPY",
+                                            "GBP",
+                                            "CHF",
+                                            "AUD",
+                                            "CAD",
+                                            "NZD"
+                                        ],
+                                        "isTransparent": false,
+                                        "colorTheme": "dark",
+                                        "locale": "en"
+                                    }
                                 </script>
                             </div>
                             <!-- TradingView Widget END -->
@@ -161,15 +259,15 @@
                             <div class="tradingview-widget-container">
                                 <div class="tradingview-widget-container__widget"></div>
                                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-                                {
-                                    "feedMode": "market",
-                                    "colorTheme": "dark",
-                                    "isTransparent": false,
-                                    "displayMode": "regular",
-                                    "width": "100%",
-                                    "height": "400",
-                                    "locale": "en"
-                                }
+                                    {
+                                        "feedMode": "market",
+                                        "colorTheme": "dark",
+                                        "isTransparent": false,
+                                        "displayMode": "regular",
+                                        "width": "100%",
+                                        "height": "400",
+                                        "locale": "en"
+                                    }
                                 </script>
                             </div>
                             <!-- TradingView Widget END -->

@@ -5,166 +5,178 @@
     <!-- ==================== Breadcrumb End Here ==================== -->
 
     <!--==========================  About Section Start  ==========================-->
-    <section class="about-section bg--black-two py-120">
+    <section class="about-section bg-light py-5">
         <div class="container position-relative">
-            <div class="about-shape d-none d-lg-block">
-                <img src="{{ asset('frontend/svg/twostar.svg') }}" alt="star">
-                <img src="{{ asset('frontend/svg/star-1.svg') }}" alt="star">
-            </div>
-            <div class="row row-gap-5">
-                <div class="col-xl-6 align-self-center">
-                    <div class="about-img pe-xl-4 scaleUp">
-                        <img src="{{ asset('frontend/images/about/about1.png') }}" alt="about image" class="img-fluid ">
-                    </div>
+            <div class="row align-items-center gy-5">
+
+                <!-- Image Section -->
+                <div class="col-xl-6 text-center">
+                    <img src="{{ asset('frontend/images/about/about1.png') }}" alt="About our trading platform"
+                        class="img-fluid rounded shadow">
                 </div>
-                <div class="col-xl-6 align-self-center">
+
+                <!-- Content Section -->
+                <div class="col-xl-6">
                     <div class="section-content">
-                        <h6 class="right-reveal">About Us</h6>
-                      
-                        <h2 class="right-reveal">Your Trusted Partner in Online Trading</h2>
-                        <p class="right-reveal">Welcome to our innovative trading platform, where we combine advanced
-                            technology
-                            with user-friendly interfaces to provide you with a superior trading experience. Our
-                            platform offers
-                            diverse investment opportunities across cryptocurrencies, stocks, and forex markets, all
-                            designed to
-                            help you achieve your financial goals with confidence and security.</p>
-                    </div>
-                    <div class="d-flex flex-wrap gap-4 my-4 my-lg-5">
-                        <div class="info-box right-reveal">
-                            <div class="fs-40 text--base fw-bold">
-                                <span class="odometer" data-odometer-final="24">24</span>/7
-                            </div>
-                            <p>Trading Support</p>
-                        </div>
-                        <div class="info-box right-reveal">
-                            <div class="fs-40 text--base fw-bold">
-                                <span class="odometer" data-odometer-final="100">100</span>+
-                            </div>
-                            <p>Trading Pairs</p>
-                        </div>
+                        <h6 class="text-uppercase text-primary mb-2">
+                            <i class="fa fa-info-circle me-2"></i> About Us
+                        </h6>
+                        <h2 class="fw-bold mb-4">Your Reliable Gateway to Smarter Trading</h2>
+                        <p class="text-muted">
+                            Discover a next-generation trading platform built to empower investors at every level.
+                            We blend cutting-edge technology with an intuitive interface, giving you seamless
+                            access to global markets. From cryptocurrencies and stocks to forex trading, our
+                            platform delivers secure, diverse, and profitable opportunities to help you reach
+                            your financial ambitions with confidence.
+                        </p>
                     </div>
 
+                    <!-- Info Boxes -->
+                    <div class="d-flex flex-wrap gap-4 mt-4">
+                        <div class="info-box text-center">
+                            <div class="fs-2 text-primary fw-bold">
+                                <i class="fa fa-headset me-2"></i> 24/7
+                            </div>
+                            <p class="mb-0">Trading Support</p>
+                        </div>
+                        <div class="info-box text-center">
+                            <div class="fs-2 text-primary fw-bold">
+                                <i class="fa fa-chart-line me-2"></i> 100+
+                            </div>
+                            <p class="mb-0">Trading Pairs</p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
+
     <!--==========================  About Section End  ==========================-->
 
     <!--==========================  Faq Section Start  ==========================-->
-    <section class="faq-section bg--black py-120">
+    <section class="faq-section bg-light py-5">
         <div class="container position-relative">
-            <div class="faq-shape d-none d-lg-block">
-                <img src="{{ asset('frontend/svg/bank.svg') }}" alt="bank">
-                <img src="{{ asset('frontend/svg/balance-5.svg') }}" alt="balance">
-            </div>
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-8">
-                    <div class="section-content text-center">
-                        <h6 class="top-reveal">Faq</h6>
-                        <h2 class="top-reveal">Frequently Asked Questions</h2>
-                        <p class="top-reveal">Trade Mastery, we believe great traders aren't born they’re built
-                            through the right tools, education, and support. Our mission is simple: to empower.
+                    <div class="section-content text-center mb-5">
+                        <h6 class="text-uppercase text-primary">
+                            <i class="fa fa-question-circle me-2"></i> FAQ
+                        </h6>
+                        <h2 class="fw-bold">Frequently Asked Questions</h2>
+                        <p class="text-muted">
+                            At <strong>Trade Mastery</strong>, we believe successful traders are built through
+                            knowledge, tools, and guidance. Here are answers to the most common questions we receive.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="row mt-60 row-gap-5">
-                <div class="col-lg-6 align-self-center">
-                    <img src="{{ asset('frontend/images/faq/faq.png') }}" alt="faq" class="img-fluid scaleUp">
+
+            <div class="row gy-5">
+                <!-- Image -->
+                <div class="col-lg-6 text-center">
+                    <img src="{{ asset('frontend/images/faq/faq.png') }}" alt="FAQ illustration"
+                        class="img-fluid rounded shadow">
                 </div>
-                <div class="col-lg-6 align-self-center">
-                    <div class="accordion custom--accordion" id="faqExample">
-                        <div class="accordion-item bottom-reveal">
+
+                <!-- Accordion -->
+                <div class="col-lg-6">
+                    <div class="accordion" id="faqAccordion">
+
+                        <!-- Q1 -->
+                        <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
+                                    <i class="fa fa-wallet me-2 text-primary"></i>
                                     What is the minimum deposit to start trading?
                                 </button>
                             </h2>
-                            <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#faqExample">
+                            <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    <p>
-                                        Trade Mastery, we believe is the great traders aren't born they’re built
-                                        through the right tools, education, and support. Our mission is simple
-                                        to empower every client with the resources.
-                                    </p>
+                                    You can begin trading with as little as <strong>$100</strong>.
+                                    This allows you to test our platform with a modest investment
+                                    while exploring our features and tools.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bottom-reveal">
+
+                        <!-- Q2 -->
+                        <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqTwo" aria-expanded="true" aria-controls="faqTwo">
+                                    <i class="fa fa-chalkboard-teacher me-2 text-primary"></i>
                                     Do you offer a demo account for practice trading?
                                 </button>
                             </h2>
-                            <div id="faqTwo" class="accordion-collapse collapse show" data-bs-parent="#faqExample">
+                            <div id="faqTwo" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    <p>
-                                        Trade Mastery, we believe is the great traders aren't born they’re built
-                                        through the right tools, education, and support. Our mission is simple
-                                        to empower every client with the resources.
-                                    </p>
+                                    Yes! We provide a <strong>free demo account</strong> so you can
+                                    practice trading in real-time conditions without risking your capital.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bottom-reveal">
+
+                        <!-- Q3 -->
+                        <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                                    <i class="fa fa-laptop me-2 text-primary"></i>
                                     What platforms can I use to trade with your broker?
                                 </button>
                             </h2>
-                            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqExample">
+                            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    <p>
-                                        Trade Mastery, we believe is the great traders aren't born they’re built
-                                        through the right tools, education, and support. Our mission is simple
-                                        to empower every client with the resources.
-                                    </p>
+                                    Our platform is accessible on <strong>web browsers, iOS, and Android apps</strong>,
+                                    ensuring you can trade anytime, anywhere.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bottom-reveal">
+
+                        <!-- Q4 -->
+                        <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                                    <i class="fa fa-lock me-2 text-primary"></i>
                                     Are my funds secure with your company?
                                 </button>
                             </h2>
-                            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqExample">
+                            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    <p>
-                                        Trade Mastery, we believe is the great traders aren't born they’re built
-                                        through the right tools, education, and support. Our mission is simple
-                                        to empower every client with the resources.
-                                    </p>
+                                    Absolutely. We use <strong>bank-level encryption, segregated client accounts,
+                                        and regulatory compliance</strong> to keep your funds safe.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bottom-reveal">
+
+                        <!-- Q5 -->
+                        <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
+                                    <i class="fa fa-chart-line me-2 text-primary"></i>
                                     What trading instruments do you offer?
                                 </button>
                             </h2>
-                            <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqExample">
+                            <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    <p>
-                                        Trade Mastery, we believe is the great traders aren't born they’re built
-                                        through the right tools, education, and support. Our mission is simple
-                                        to empower every client with the resources.
-                                    </p>
+                                    We offer a wide range of markets including
+                                    <strong>cryptocurrencies, forex, commodities, indices, and stocks</strong>—giving
+                                    you
+                                    diverse opportunities to trade.
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!--==========================  Faq Section End  ==========================-->
 
     <!--==========================   Text-slide Start  ==========================-->
@@ -357,158 +369,121 @@
     <!--==========================  Team Section End  ==========================-->
 
     <!--==========================  Testimonial Section Start  ==========================-->
-    <section class="testimonial-section bg--black-two py-120">
+    <section class="testimonial-section bg-light py-5">
         <div class="container position-relative">
-            <div class="testimonial-shape d-none d-lg-block">
-                <img src="{{ asset('frontend/svg/twostar.svg') }}" alt="star">
-                <img src="{{ asset('frontend/svg/maneyPlant.svg') }}" alt="money Plant">
-            </div>
-            <div class="row row-gap-2">
-                <div class="col-lg-6 align-self-end">
+
+            <!-- Section Heading -->
+            <div class="row gy-3 align-items-end">
+                <div class="col-lg-6">
                     <div class="section-content">
-                        <h6 class="right-reveal">Testimonial</h6>
-                        <h2 class="mb-2 right-reveal">Our Clients Says</h2>
+                        <h6 class="text-uppercase text-primary">
+                            <i class="fa fa-comments me-2"></i> Testimonials
+                        </h6>
+                        <h2 class="fw-bold mb-2">What Our Clients Say</h2>
                     </div>
                 </div>
-                <div class="col-lg-6 align-self-end">
-                    <div class="section-content">
-                        <p class="right-reveal">Trade Mastery, we believe great traders aren't born they’re
-                            built through the right tools,
-                            education, and support. Our mission is simple: to empower every client with the
-                            resources they
-                            need to grow, succeed, and master.</p>
-                    </div>
+                <div class="col-lg-6">
+                    <p class="text-muted">
+                        At <strong>Trade Mastery</strong>, our mission is to equip every trader with the right
+                        tools, knowledge, and support to succeed. Here’s what our clients are saying
+                        about their journey with us.
+                    </p>
                 </div>
             </div>
-            <div class="row mt-60">
-                <div class="col-12 position-relative bottom-reveal">
+
+            <!-- Slider -->
+            <div class="row mt-5">
+                <div class="col-12 position-relative">
                     <div class="testimonial-slide swiper">
                         <div class="swiper-wrapper">
+
+                            <!-- Testimonial 1 -->
                             <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <div class="start-client">
-                                        <img src="{{ asset('frontend/svg/star-5.svg') }}" alt="star">
+                                <div class="testimonial-item p-4 bg-white rounded shadow-sm">
+                                    <div class="mb-3">
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
                                     </div>
-                                    <div class="client-body">
-                                        <img src="{{ asset('frontend/svg/quite.svg') }}" alt="quite">
-                                        <p class="client-text">
-                                            Trade Mastery, we believes great traders aren't born they’re built
-                                            through the rights there tools, education, and supports. Our mission
-                                            is simple to empower every client.
-                                        </p>
-                                        <div class="client-info d-flex gap-3 align-self-center">
-                                            <img src="{{ asset('frontend/images/client/client1.png') }}"
-                                                alt="client">
-                                            <div class="text">
-                                                <h4 class="mb-2">Robert Jenkins</h4>
-                                                <p>Urban Designer</p>
-                                            </div>
+                                    <p class="client-text fst-italic">
+                                        “The platform is intuitive and reliable. I started small, and within months
+                                        I felt confident in my trading decisions.”
+                                    </p>
+                                    <div class="client-info d-flex align-items-center mt-3">
+                                        <img src="{{ asset('frontend/images/client/client1.png') }}" alt="client"
+                                            class="rounded-circle" width="60">
+                                        <div class="ms-3">
+                                            <h5 class="mb-1">Robert Jenkins</h5>
+                                            <small class="text-muted">Urban Designer</small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Testimonial 2 -->
                             <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <div class="start-client">
-                                        <img src="{{ asset('frontend/svg/star-5.svg') }}" alt="star">
+                                <div class="testimonial-item p-4 bg-white rounded shadow-sm">
+                                    <div class="mb-3">
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
                                     </div>
-                                    <div class="client-body">
-                                        <img src="{{ asset('frontend/svg/quite.svg') }}" alt="quite">
-                                        <p class="client-text">
-                                            Trade Mastery, we believes great traders aren't born they’re built
-                                            through the rights there tools, education, and supports. Our mission
-                                            is simple to empower every client.
-                                        </p>
-                                        <div class="client-info d-flex gap-3 align-self-center">
-                                            <img src="{{ asset('frontend/images/client/client2.png') }}"
-                                                alt="client">
-                                            <div class="text">
-                                                <h4 class="mb-2">Johanna Dach</h4>
-                                                <p>Urban Artist</p>
-                                            </div>
+                                    <p class="client-text fst-italic">
+                                        “The demo account gave me the confidence to move into live trading.
+                                        Their support team is fantastic.”
+                                    </p>
+                                    <div class="client-info d-flex align-items-center mt-3">
+                                        <img src="{{ asset('frontend/images/client/client2.png') }}" alt="client"
+                                            class="rounded-circle" width="60">
+                                        <div class="ms-3">
+                                            <h5 class="mb-1">Johanna Dach</h5>
+                                            <small class="text-muted">Digital Artist</small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Testimonial 3 -->
                             <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <div class="start-client">
-                                        <img src="{{ asset('frontend/svg/star-5.svg') }}" alt="star">
+                                <div class="testimonial-item p-4 bg-white rounded shadow-sm">
+                                    <div class="mb-3">
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
                                     </div>
-                                    <div class="client-body">
-                                        <img src="{{ asset('frontend/svg/quite.svg') }}" alt="quite">
-                                        <p class="client-text">
-                                            Trade Mastery, we believes great traders aren't born they’re built
-                                            through the rights there tools, education, and supports. Our mission
-                                            is simple to empower every client.
-                                        </p>
-                                        <div class="client-info d-flex gap-3 align-self-center">
-                                            <img src="{{ asset('frontend/images/client/client3.png') }}"
-                                                alt="client">
-                                            <div class="text">
-                                                <h4 class="mb-2">Harvey Witting</h4>
-                                                <p>Urban Designer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <div class="start-client">
-                                        <img src="{{ asset('frontend/svg/star-5.svg') }}" alt="star">
-                                    </div>
-                                    <div class="client-body">
-                                        <img src="{{ asset('frontend/svg/quite.svg') }}" alt="quite">
-                                        <p class="client-text">
-                                            Trade Mastery, we believes great traders aren't born they’re built
-                                            through the rights there tools, education, and supports. Our mission
-                                            is simple to empower every client.
-                                        </p>
-                                        <div class="client-info d-flex gap-3 align-self-center">
-                                            <img src="{{ asset('frontend/images/client/client1.png') }}"
-                                                alt="client">
-                                            <div class="text">
-                                                <h4 class="mb-2">Robert Jenkins</h4>
-                                                <p>Urban Designer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <div class="start-client">
-                                        <img src="{{ asset('frontend/svg/star-5.svg') }}" alt="star">
-                                    </div>
-                                    <div class="client-body">
-                                        <img src="{{ asset('frontend/svg/quite.svg') }}" alt="quite">
-                                        <p class="client-text">
-                                            Trade Mastery, we believes great traders aren't born they’re built
-                                            through the rights there tools, education, and supports. Our mission
-                                            is simple to empower every client.
-                                        </p>
-                                        <div class="client-info d-flex gap-3 align-self-center">
-                                            <img src="{{ asset('frontend/images/client/client2.png') }}"
-                                                alt="client">
-                                            <div class="text">
-                                                <h4 class="mb-2">Johanna Dach</h4>
-                                                <p>Urban Artist</p>
-                                            </div>
+                                    <p class="client-text fst-italic">
+                                        “Secure, transparent, and easy to use. Trade Mastery has changed
+                                        the way I look at investing.”
+                                    </p>
+                                    <div class="client-info d-flex align-items-center mt-3">
+                                        <img src="{{ asset('frontend/images/client/client3.png') }}" alt="client"
+                                            class="rounded-circle" width="60">
+                                        <div class="ms-3">
+                                            <h5 class="mb-1">Harvey Witting</h5>
+                                            <small class="text-muted">Financial Analyst</small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <!-- Pagination -->
+                        <div class="swiper-pagination mt-4"></div>
                     </div>
+
+                    <!-- Slider Navigation -->
                     <div class="slider-btn">
                         <div class="btn-slider-prev testi-prev">
-                            <i class="fa-solid fa-chevron-left"></i>
+                            <i class="fa fa-chevron-left"></i>
                         </div>
                         <div class="btn-slider-next testi-next">
-                            <i class="fa-solid fa-chevron-right"></i>
+                            <i class="fa fa-chevron-right"></i>
                         </div>
                     </div>
                 </div>
@@ -516,4 +491,5 @@
         </div>
     </section>
     <!--==========================  Testimonial Section End  ==========================-->
+
 </x-layouts.guest>

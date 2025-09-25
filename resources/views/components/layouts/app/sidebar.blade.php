@@ -2,15 +2,7 @@
 
       <!-- Brand Logo -->
       <a href="{{ route('home') }}" class="logo">
-          <span class="logo-light">
-              <span class="logo-lg"><img src="{{ asset('dashboard/images/logo.png') }}" alt="logo"></span>
-              <span class="logo-sm"><img src="{{ asset('dashboard/images/logo-sm.png') }}" alt="small logo"></span>
-          </span>
-
-          <span class="logo-dark">
-              <span class="logo-lg"><img src="{{ asset('dashboard/images/logo-dark.png') }}" alt="dark logo"></span>
-              <span class="logo-sm"><img src="{{ asset('dashboard/images/logo-sm.png') }}" alt="small logo"></span>
-          </span>
+          <img src="{{ asset(config('app.logo')) }}" width="200" alt="logo">
       </a>
 
       <!-- Full Sidebar Menu Close Button -->

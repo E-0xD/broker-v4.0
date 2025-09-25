@@ -9,6 +9,7 @@
                         <th scope="col">TRANSACTION ID</th>
                         <th scope="col">TYPE</th>
                         <th scope="col">AMOUNT</th>
+                        <th scope="col">DATE & TIME</th>
                         <th scope="col">STATUS</th>
                     </tr>
                 </thead>
@@ -18,6 +19,7 @@
                             <th scope="row">{{ $transaction->transaction_id }}</th>
                             <td>{{ $transaction->type }}</td>
                             <td>${{ number_format($transaction->amount) }}</td>
+                            <td>{{ $transaction->created_at }}</td>
                             <td
                                 class=" rounded-pill
                                 @switch($transaction->status->value)
@@ -36,6 +38,7 @@
                             ">
                                 {{ ucfirst($transaction->status->value) }}
                             </td>
+
                         </tr>
                     @endforeach
 

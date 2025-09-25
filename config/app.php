@@ -123,4 +123,18 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'address' => env('APP_ADDRESS'),
+
+    'phone' => env('APP_PHONE'),
+
+    'city' => env('APP_CITY'),
+
+
+    'logo' => env('APP_LOGO'),
+
+    'favicon' => env('APP_FAVICON'),
+
+    'description' => env('APP_DESCRIPTION'),
+
+
 ];

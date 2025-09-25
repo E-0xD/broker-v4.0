@@ -42,7 +42,7 @@
             <!-- ==================== Footer Start Here ==================== -->
             <x-layouts.guest.footer />
             <!-- ==================== Footer End Here ==================== -->
-            
+
         </div>
         <x-layouts.guest.progress-wrap />
 
@@ -65,7 +65,7 @@
 
         <!-- main js -->
         <script src="{{ asset('frontend/js/main.js') }}"></script>
-          @include('sweetalert::alert')
+        @include('sweetalert::alert')
     </body>
 
 </html>

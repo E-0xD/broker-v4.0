@@ -16,7 +16,7 @@
                         <form action="{{ route('deposit.store') }}" method="post">
                             @csrf
                             <div class="col-12">
-                                <h5 class="mb-3">Amount in USD</h5>
+                                <h5 class="mb-3">Amount in {{ Auth::user()->currency }}</h5>
                                 <div class="form-floating mb-3">
                                     <input value="{{old("amount")}}" type="number" name="amount" class="form-control" id="floatingInput"
                                         placeholder="1000000">
