@@ -55,7 +55,7 @@
     <!--==========================  About Section End  ==========================-->
 
     <!--==========================  Faq Section Start  ==========================-->
-    <section class="faq-section bg-light py-5">
+    <section class="faq-section bg--black-two  py-5">
         <div class="container position-relative">
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-8">
@@ -369,7 +369,7 @@
     <!--==========================  Team Section End  ==========================-->
 
     <!--==========================  Testimonial Section Start  ==========================-->
-    <section class="testimonial-section bg-light py-5">
+    <section class="testimonial-section bg--black-two  py-5">
         <div class="container position-relative">
 
             <!-- Section Heading -->
