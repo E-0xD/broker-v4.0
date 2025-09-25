@@ -41,6 +41,58 @@
                                 <input type="password" wire:model="password_confirmation" class="form-control"
                                     placeholder="Confirm Password*" >
                             </div>
+
+                            <div class="col-sm-6">
+                                <select wire:model="country" class="form-control">
+                                    <option value="">Select Country*</option>
+                                    @foreach(\App\Enums\Country::cases() as $country)
+                                        <option value="{{ $country->value }}">{{ $country->value }}</option>
+                                    @endforeach
+                                </select>
+                                @error('country')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+
+                            <div class="col-sm-6">
+                                <input type="tel" wire:model="phone" class="form-control"
+                                    placeholder="Phone Number*" >
+                                @error('phone')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+
+                            {{-- <div class="col-sm-4">
+                                <select wire:model="currency" class="form-control">
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="GBP">GBP</option>
+                                </select>
+                                @error('currency')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div> --}}
+
+                            <div class="col-sm-4">
+                                <select wire:model="account_type" class="form-control">
+                                    <option value="standard">Standard Account</option>
+                                    <option value="premium">Premium Account</option>
+                                    <option value="vip">VIP Account</option>
+                                </select>
+                                @error('account_type')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+
+                            <div class="col-sm-4">
+                                <select wire:model="trading_platform" class="form-control">
+                                    <option value="MT4">MetaTrader 4</option>
+                                    <option value="MT5">MetaTrader 5</option>
+                                </select>
+                                @error('trading_platform')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
                            
                             <div class="col-12">
                                 <div class="submit-button">

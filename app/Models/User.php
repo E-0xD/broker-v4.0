@@ -25,7 +25,12 @@ class User extends Authenticatable
         'email',
         'password',
         'status',
-        'role'
+        'role',
+        'country',
+        'phone',
+        'currency',
+        'account_type',
+        'trading_platform'
     ];
 
     /**
@@ -78,5 +83,13 @@ class User extends Authenticatable
     public function transactions(): HasMany
     {
         return $this->hasMany(Transaction::class);
+    }
+
+    /**
+     * Get all trades for the user
+     */
+    public function trades(): HasMany
+    {
+        return $this->hasMany(Trade::class);
     }
 }

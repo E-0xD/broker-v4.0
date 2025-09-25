@@ -41,4 +41,13 @@ return [
         'payment_url' => env('NOWPAYMENT_PAYMENT_URL'),
     ],
 
+    'alphavantage' => [
+        'url' => env('ALPHA_VANTAGE_API_URL'),
+        'key' => env('ALPHA_VANTAGE_API_KEY'),
+    ],
+
+    'coingheko'=>[
+        'url' => env('COINGHEKO_API_URL')
+    ]
+
 ];

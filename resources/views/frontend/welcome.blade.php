@@ -8,33 +8,23 @@
                 <img src="{{ asset('frontend/svg/star-4.svg') }}" alt="star">
             </div>
             <div class="row row-gap-5 justify-content-between">
-                <div class="col-lg-6 col-xl-5 align-self-center order-1 order-lg-0">
-                    <div class="banner_content">
-                        <div class="banner_content--sub text--base fs-20 fw-medium right-reveal">
-                            <img src="{{ asset('frontend/svg/arrow-right.svg') }}" alt="arrow">
-                            Invest Smart, Trade Smarter
-                        </div>
-                        <h1 class="right-reveal">
-                            Professional Forex and Stock
-                            <span class="text--base">Trading Investments</span>
-                            <i class="flaticon-compass text--base-two"></i>
-                        </h1>
-                        <p class="fs-18 fw-medium right-reveal">Whether you're just starting or you're a
-                            seasoned trader, our platform offers comprehensive
-                            secure.</p>
-                        <div class="d-flex flex-wrap gap-4">
-                            <a href="{{ route('login') }}" class="btn btn--base-two right-reveal">
-                                Start Trading <i class="flaticon-arrow-upper-right"></i>
+                <div class="col-lg-7 align-self-center">
+                    <div class="banner-content">
+                        <h1 class="left-reveal">Experience Advanced <span class="text--base">Trading & Investment</span> Solutions</h1>
+                        <p class="left-reveal fs-18 fw-medium">Access global markets, real-time trading, and professional investment opportunities. Start your journey to financial success with our comprehensive platform.</p>
+                        <div class="d-flex flex-wrap gap-4 mt-4">
+                            <a href="{{ route('register') }}" class="btn btn--base-two left-reveal">
+                                Create Account <i class="flaticon-arrow-upper-right"></i>
                             </a>
-                            <a href="{{ route('register') }}" class="btn btn-outline--base right-reveal">
-                                Try Demo Account <i class="flaticon-arrow-upper-right"></i>
+                            <a href="{{ route('login') }}" class="btn btn-outline--base left-reveal">
+                                Login Now <i class="flaticon-arrow-upper-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 align-self-center">
+                <div class="col-lg-5 align-self-center">
                     <div class="banner-img scaleUp">
-                        <img src="{{ asset('frontend/images/banner/banner-img.png') }}" alt="banner">
+                        <img src="{{ asset('frontend/images/banner/banner-img.png') }}" alt="Trading Platform" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -991,106 +981,6 @@
     </section>
     <!--==========================  Trade Section End  ==========================-->
 
-    <!--==========================  Pricing Section Start  ==========================-->
-    <section class="pricing-section bg--black-two py-120">
-        <div class="container position-relative">
-            <div class="pricing-shape d-none d-lg-block">
-                <img src="{{ asset('frontend/svg/analysis-1.svg') }}" alt="star">
-                <img src="{{ asset('frontend/svg/analysis-2.svg') }}" alt="star">
-            </div>
-            <div class="row row-gap-3 ">
-                <div class="col-lg-6 align-self-end">
-                    <div class="section-content">
-                        <h6 class="right-reveal">Pricing Plan</h6>
-                        <h2 class="mb-0 right-reveal">Our Pricing Plan</h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 align-self-end">
-                    <div class="section-content">
-                        <p class="right-reveal">Trade Mastery, we believe great traders aren't born they’re
-                            built through
-                            the right tools,
-                            education, and support. Our mission is simple: to empower every client with the
-                            resources they
-                            need to grow, succeed, and master.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-60 row-gap-4 justify-content-center">
-                <div class="col-12 bottom-reveal">
-                    <div class="pricing-slide swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="pricing-content">
-                                    <div class="pricing-header">
-                                        <h6 class="mb-2">Basic Plan</h6>
-                                        <h2 class="mb-2">$65<sub class="fs-16 fw-normal">/Per Month</sub></h2>
-                                        <p>Free Advertisement</p>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul>
-                                            <li>Basic charting economic calendar</li>
-                                            <li>Web Trader & Mobile</li>
-                                            <li>Negative balance protection</li>
-                                            <li>Swap Free Option Available</li>
-                                            <li>Email Support Only</li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-footer">
-                                        <a href="{{ route('register') }}" class="btn btn--black-two">Choose Plan</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="pricing-content">
-                                    <div class="pricing-header">
-                                        <h6 class="mb-2">Standard Plan</h6>
-                                        <h2 class="mb-2">$130<sub class="fs-16 fw-normal">/Per Month</sub></h2>
-                                        <p>Free Advertisement</p>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul>
-                                            <li>Basic charting economic calendar</li>
-                                            <li>Web Trader & Mobile</li>
-                                            <li>Negative balance protection</li>
-                                            <li>Swap Free Option Available</li>
-                                            <li>Email Support Only</li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-footer">
-                                        <a href="{{ route('register') }}" class="btn btn--black-two">Choose Plan</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="pricing-content">
-                                    <div class="pricing-header">
-                                        <h6 class="mb-2">Premium Plan</h6>
-                                        <h2 class="mb-2">$199<sub class="fs-16 fw-normal">/Per Month</sub></h2>
-                                        <p>Free Advertisement</p>
-                                    </div>
-                                    <div class="pricing-body">
-                                        <ul>
-                                            <li>Basic charting economic calendar</li>
-                                            <li>Web Trader & Mobile</li>
-                                            <li>Negative balance protection</li>
-                                            <li>Swap Free Option Available</li>
-                                            <li>Email Support Only</li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-footer">
-                                        <a href="{{ route('register') }}" class="btn btn--black-two">Choose Plan</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--==========================  Pricing Section End  ==========================-->
 
     <!--==========================  People Section Start  ==========================-->
     <section class="people-trust-section bg--black py-120">

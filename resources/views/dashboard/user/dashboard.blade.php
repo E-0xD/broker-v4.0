@@ -13,7 +13,7 @@
                         </div>
 
                         <div class="card-body pt-0">
-                            <h2 class="fw-bold">${{ number_format($user->balance) }}</h2>
+                            <h2 class="fw-bold">{{Auth::user()->currency . ' ' . number_format($user->balance) }}</h2>
 
                             <div class="row g-2 mt-2 pt-1">
                                 <div class="col">
@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="card-body pt-0">
-                            <h2 class="fw-bold">${{ number_format($totalActiveInvestment, 2) }}</h2>
+                            <h2 class="fw-bold">{{Auth::user()->currency . ' ' .number_format($totalActiveInvestment, 2) }}</h2>
 
                             <div class="row g-2 mt-2 pt-1">
                                 <div class="col">
@@ -77,25 +77,25 @@
                                         <p class="text-muted mt-3 mb-1">Total Active Investment</p>
                                         <h4 class="mb-3">
                                             <span
-                                                class="fw-semibold">${{ number_format($totalActiveInvestment, 2) }}</span>
+                                                class="fw-semibold">{{Auth::user()->currency . ' ' . number_format($totalActiveInvestment, 2) }}</span>
                                         </h4>
                                     </div>
                                     <div class="col-md col-6">
                                         <p class="text-muted mt-3 mb-1">Total Investment</p>
                                         <h4 class="mb-3">
-                                            <span class="fw-semibold">${{ number_format($totalInvestment, 2) }}</span>
+                                            <span class="fw-semibold">{{Auth::user()->currency . ' ' . number_format($totalInvestment, 2) }}</span>
                                         </h4>
                                     </div>
                                     <div class="col-md col-6">
                                         <p class="text-muted mt-3 mb-1">Daily ROI</p>
                                         <h4 class="mb-3">
-                                            <span class="fw-semibold">${{ number_format($totalDailyRoi, 2) }}</span>
+                                            <span class="fw-semibold">{{Auth::user()->currency . ' ' . number_format($totalDailyRoi, 2) }}</span>
                                         </h4>
                                     </div>
                                     <div class="col-md col-6">
                                         <p class="text-muted mt-3 mb-1">Lifetime Profit</p>
                                         <h4 class="mb-3">
-                                            <span class="fw-semibold">${{ number_format($lifetimeProfit, 2) }}</span>
+                                            <span class="fw-semibold">{{Auth::user()->currency . ' ' . number_format($lifetimeProfit, 2) }}</span>
                                         </h4>
                                     </div>
                                 </div>
@@ -108,6 +108,71 @@
                             <script>
                                 var chartData = @json($chartData);
                             </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TradingView Widgets -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="header-title">Market Heat Map</h4>
+                        </div>
+                        <div class="card-body">
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
+                                {
+                                    "width": "100%",
+                                    "height": "400",
+                                    "currencies": [
+                                        "EUR",
+                                        "USD",
+                                        "JPY",
+                                        "GBP",
+                                        "CHF",
+                                        "AUD",
+                                        "CAD",
+                                        "NZD"
+                                    ],
+                                    "isTransparent": false,
+                                    "colorTheme": "dark",
+                                    "locale": "en"
+                                }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="header-title">Live Market News</h4>
+                        </div>
+                        <div class="card-body">
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                                {
+                                    "feedMode": "market",
+                                    "colorTheme": "dark",
+                                    "isTransparent": false,
+                                    "displayMode": "regular",
+                                    "width": "100%",
+                                    "height": "400",
+                                    "locale": "en"
+                                }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
                         </div>
                     </div>
                 </div>
