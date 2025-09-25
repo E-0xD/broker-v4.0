@@ -9,6 +9,7 @@ use App\Http\Controllers\Dashboard\WithdrawController;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
+use App\Livewire\Trading;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('user')->middleware(['auth', 'check.status'])->group(function () {
@@ -29,6 +30,7 @@ Route::prefix('user')->middleware(['auth', 'check.status'])->group(function () {
 
     Route::view('charts', 'dashboard.user.chart')->name('chart');
 
+    Route::get('trading', Trading::class)->name('trading');
 
     Route::redirect('settings', 'settings/profile');
 

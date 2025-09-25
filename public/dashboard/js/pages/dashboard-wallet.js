@@ -71,17 +71,17 @@ var colors = ["#727cf5", "#0acf97", "#fa5c7c", "#ffbc00"],
             {
                 name: "ROI Earnings",
                 type: "area",
-                data: chartData.map(data => data.roi),
+                data: chartData.monthly.map(data => data.roi),
             },
             {
                 name: "Deposits",
                 type: "bar",
-                data: chartData.map(data => data.deposits),
+                data: chartData.monthly.map(data => data.deposits),
             },
             {
                 name: "Withdrawals",
                 type: "bar",
-                data: chartData.map(data => data.withdrawals),
+                data: chartData.monthly.map(data => data.withdrawals),
             },
         ],
         chart: { height: 375, type: "line", toolbar: { show: !1 } },
@@ -138,22 +138,22 @@ var colors = ["#727cf5", "#0acf97", "#fa5c7c", "#ffbc00"],
             y: [
                 {
                     formatter: function (o) {
-                        return void 0 !== o ? "$" + o.toFixed(2) : o;
+                        return void 0 !== o ? chartData.currency + ' ' + o.toFixed(2) : o;
                     },
                 },
                 {
                     formatter: function (o) {
-                        return void 0 !== o ? "$" + o.toFixed(2) : o;
+                        return void 0 !== o ? chartData.currency + ' ' + o.toFixed(2) : o;
                     },
                 },
                 {
                     formatter: function (o) {
-                        return void 0 !== o ? "$" + o.toFixed(2) : o;
+                        return void 0 !== o ? chartData.currency + ' ' + o.toFixed(2) : o;
                     },
                 },
                 {
                     formatter: function (o) {
-                        return void 0 !== o ? "$" + o.toFixed(2) : o;
+                        return void 0 !== o ? chartData.currency + ' ' + o.toFixed(2) : o;
                     },
                 },
             ],

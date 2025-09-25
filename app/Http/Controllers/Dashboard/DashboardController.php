@@ -56,16 +56,19 @@ class DashboardController extends Controller
                 ->get();
 
             // Prepare chart data
-            $chartData = collect(range(1, 12))->map(function ($month) use ($monthlyData) {
-                $monthData = $monthlyData->firstWhere('month', $month);
-                return [
-                    'roi' => $monthData ? round($monthData->total_roi, 2) : 0,
-                    'deposits' => $monthData ? round($monthData->deposits, 2) : 0,
-                    'withdrawals' => $monthData ? round($monthData->withdrawals, 2) : 0
-                ];
-            });
+            $data = [
+                'currency' => Auth::user()->currency,
+                'monthly' => collect(range(1, 12))->map(function ($month) use ($monthlyData) {
+                    $monthData = $monthlyData->firstWhere('month', $month);
+                    return [
+                        'roi' => $monthData ? round($monthData->total_roi, 2) : 0,
+                        'deposits' => $monthData ? round($monthData->deposits, 2) : 0,
+                        'withdrawals' => $monthData ? round($monthData->withdrawals, 2) : 0,
+                    ];
+                })
+            ];
 
-            return $chartData;
+            return $data;
         } catch (\Throwable $th) {
             Log::error($th);
             Alert::error('Error', 'An Error Occurred');

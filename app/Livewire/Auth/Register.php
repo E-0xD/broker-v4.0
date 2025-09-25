@@ -2,11 +2,13 @@
 
 namespace App\Livewire\Auth;
 
+use App\Enums\Country;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Illuminate\Validation\Rules\Enum;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
@@ -14,12 +16,14 @@ use Livewire\Component;
 class Register extends Component
 {
     public string $name = '';
-
     public string $email = '';
-
     public string $password = '';
-
     public string $password_confirmation = '';
+    public string $country = '';
+    public string $phone = '';
+    // public string $currency = 'USD';
+    public string $account_type = 'standard';
+    public string $trading_platform = 'MT4';
 
     /**
      * Handle an incoming registration request.
@@ -30,6 +34,11 @@ class Register extends Component
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
+            'country' => ['required', 'string', new Enum(Country::class)],
+            'phone' => ['required', 'string', 'regex:/^\+?[1-9]\d{1,14}$/'],
+            // 'currency' => ['required', 'string', 'in:USD,EUR,GBP'],
+            'account_type' => ['required', 'string', 'in:standard,premium,vip'],
+            'trading_platform' => ['required', 'string', 'in:MT4,MT5'],
         ]);
 
         $validated['password'] = Hash::make($validated['password']);
@@ -38,6 +47,6 @@ class Register extends Component
 
         Auth::login($user);
 
-        $this->redirect(route('dashboard', absolute: false), navigate: true);
+        $this->redirect(route('dashboard', absolute: true), navigate: false);
     }
 }

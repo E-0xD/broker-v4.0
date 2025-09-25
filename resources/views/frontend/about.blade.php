@@ -1,63 +1,62 @@
 <x-layouts.guest>
 
-
     <!-- ==================== Breadcrumb Start Here ==================== -->
     <x-layouts.guest.breadcrum title="About Us" :breadcrums="['About Us']" />
     <!-- ==================== Breadcrumb End Here ==================== -->
-
 
     <!--==========================  About Section Start  ==========================-->
     <section class="about-section bg--black-two py-120">
         <div class="container position-relative">
             <div class="about-shape d-none d-lg-block">
-                <img src="{{asset('frontend/svg/twostar.svg')}}" alt="star">
-                <img src="{{asset('frontend/svg/star-1.svg')}}" alt="star">
+                <img src="{{ asset('frontend/svg/twostar.svg') }}" alt="star">
+                <img src="{{ asset('frontend/svg/star-1.svg') }}" alt="star">
             </div>
             <div class="row row-gap-5">
                 <div class="col-xl-6 align-self-center">
                     <div class="about-img pe-xl-4 scaleUp">
-                        <img src="{{asset('frontend/images/about/about1.png')}}" alt="about image" class="img-fluid ">
+                        <img src="{{ asset('frontend/images/about/about1.png') }}" alt="about image" class="img-fluid ">
                     </div>
                 </div>
                 <div class="col-xl-6 align-self-center">
                     <div class="section-content">
                         <h6 class="right-reveal">About Us</h6>
-                        <h2 class="right-reveal">Building Better Traders One Trade at a Time</h2>
-                        <p class="right-reveal">Trade Mastery, we believe great traders aren't born they’re
-                            built through the right tools, education, and support. Our mission is simple: to
-                            empower every client with the resources they need to grow, succeed, and master the
-                            financial markets.
-                            We combine cutting-edge trading technology.</p>
+                      
+                        <h2 class="right-reveal">Your Trusted Partner in Online Trading</h2>
+                        <p class="right-reveal">Welcome to our innovative trading platform, where we combine advanced
+                            technology
+                            with user-friendly interfaces to provide you with a superior trading experience. Our
+                            platform offers
+                            diverse investment opportunities across cryptocurrencies, stocks, and forex markets, all
+                            designed to
+                            help you achieve your financial goals with confidence and security.</p>
                     </div>
                     <div class="d-flex flex-wrap gap-4 my-4 my-lg-5">
                         <div class="info-box right-reveal">
                             <div class="fs-40 text--base fw-bold">
-                                <span class="odometer" data-odometer-final="10">5</span>+
-                                Years
+                                <span class="odometer" data-odometer-final="24">24</span>/7
                             </div>
-                            <p>Consulting Experience</p>
+                            <p>Trading Support</p>
                         </div>
                         <div class="info-box right-reveal">
                             <div class="fs-40 text--base fw-bold">
-                                <span class="odometer" data-odometer-final="36">10</span>k+
+                                <span class="odometer" data-odometer-final="100">100</span>+
                             </div>
-                            <p>Satisfied Customers</p>
+                            <p>Trading Pairs</p>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </section>
     <!--==========================  About Section End  ==========================-->
 
-
     <!--==========================  Faq Section Start  ==========================-->
     <section class="faq-section bg--black py-120">
         <div class="container position-relative">
             <div class="faq-shape d-none d-lg-block">
-                <img src="{{asset('frontend/svg/bank.svg')}}" alt="bank">
-                <img src="{{asset('frontend/svg/balance-5.svg')}}" alt="balance">
+                <img src="{{ asset('frontend/svg/bank.svg') }}" alt="bank">
+                <img src="{{ asset('frontend/svg/balance-5.svg') }}" alt="balance">
             </div>
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-8">
@@ -72,7 +71,7 @@
             </div>
             <div class="row mt-60 row-gap-5">
                 <div class="col-lg-6 align-self-center">
-                    <img src="{{asset('frontend/images/faq/faq.png')}}" alt="faq" class="img-fluid scaleUp">
+                    <img src="{{ asset('frontend/images/faq/faq.png') }}" alt="faq" class="img-fluid scaleUp">
                 </div>
                 <div class="col-lg-6 align-self-center">
                     <div class="accordion custom--accordion" id="faqExample">
@@ -168,8 +167,6 @@
     </section>
     <!--==========================  Faq Section End  ==========================-->
 
-
-
     <!--==========================   Text-slide Start  ==========================-->
     <div class="text-slide-section py-3 bg--base">
         <div class="text-slide swiper">
@@ -181,7 +178,7 @@
                 </div>
                 <div class="swiper-slide inner-slide-element">
                     <div class="slide-icon">
-                        <img src="{{asset('frontend/svg/star-2.svg')}}" alt="star">
+                        <img src="{{ asset('frontend/svg/star-2.svg') }}" alt="star">
                     </div>
                 </div>
                 <div class="swiper-slide inner-slide-element">
@@ -191,7 +188,7 @@
                 </div>
                 <div class="swiper-slide inner-slide-element">
                     <div class="slide-icon">
-                        <img src="{{asset('frontend/svg/star-2.svg')}}" alt="star">
+                        <img src="{{ asset('frontend/svg/star-2.svg') }}" alt="star">
                     </div>
                 </div>
                 <div class="swiper-slide inner-slide-element">
@@ -201,7 +198,7 @@
                 </div>
                 <div class="swiper-slide inner-slide-element">
                     <div class="slide-icon">
-                        <img src="{{asset('frontend/svg/star-2.svg')}}" alt="star">
+                        <img src="{{ asset('frontend/svg/star-2.svg') }}" alt="star">
                     </div>
                 </div>
                 <div class="swiper-slide inner-slide-element">
@@ -211,7 +208,7 @@
                 </div>
                 <div class="swiper-slide inner-slide-element">
                     <div class="slide-icon">
-                        <img src="{{asset('frontend/svg/star-2.svg')}}" alt="star">
+                        <img src="{{ asset('frontend/svg/star-2.svg') }}" alt="star">
                     </div>
                 </div>
                 <div class="swiper-slide inner-slide-element">
@@ -221,7 +218,7 @@
                 </div>
                 <div class="swiper-slide inner-slide-element">
                     <div class="slide-icon">
-                        <img src="{{asset('frontend/svg/star-2.svg')}}" alt="star">
+                        <img src="{{ asset('frontend/svg/star-2.svg') }}" alt="star">
                     </div>
                 </div>
                 <div class="swiper-slide inner-slide-element">
@@ -231,7 +228,7 @@
                 </div>
                 <div class="swiper-slide inner-slide-element">
                     <div class="slide-icon">
-                        <img src="{{asset('frontend/svg/star-2.svg')}}" alt="star">
+                        <img src="{{ asset('frontend/svg/star-2.svg') }}" alt="star">
                     </div>
                 </div>
             </div>
@@ -239,13 +236,12 @@
     </div>
     <!--==========================  Text-slide End  ==========================-->
 
-
     <!--==========================  Team Section Start  ==========================-->
     <section class="team-section bg--black py-120">
         <div class="container position-relative">
             <div class="services-two-shape d-none d-lg-block">
-                <img src="{{asset('frontend/svg/bank.svg')}}" alt="balance">
-                <img src="{{asset('frontend/svg/balance-5.svg')}}" alt="balance">
+                <img src="{{ asset('frontend/svg/bank.svg') }}" alt="balance">
+                <img src="{{ asset('frontend/svg/balance-5.svg') }}" alt="balance">
             </div>
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8">
@@ -265,12 +261,12 @@
                             <div class="swiper-slide">
                                 <div class="team-item">
                                     <a href="#" class="team-img">
-                                        <img src="{{asset('frontend/images/team/team1.jpg')}}" alt="team"
+                                        <img src="{{ asset('frontend/images/team/team1.jpg') }}" alt="team"
                                             class="img-fluid w-100">
                                     </a>
                                     <div class="team-content">
                                         <h4 class="mb-1"><a href="#">Jonson Smith</a></h4>
-                                        <p>Design Artist</p>
+                                        <p>Chief Trading Officer</p>
                                         <ul class="social-icon">
                                             <li><a href="https://www.facebook.com/" target="_blank"><i
                                                         class="fa-brands fa-facebook-f"></i></a></li>
@@ -287,12 +283,12 @@
                             <div class="swiper-slide">
                                 <div class="team-item">
                                     <a href="#" class="team-img">
-                                        <img src="{{asset('frontend/images/team/team2.jpg')}}" alt="team"
+                                        <img src="{{ asset('frontend/images/team/team2.jpg') }}" alt="team"
                                             class="img-fluid w-100">
                                     </a>
                                     <div class="team-content">
                                         <h4 class="mb-1"><a href="#">Emily Johnson</a></h4>
-                                        <p>UX Designer</p>
+                                        <p>Risk Management Specialist</p>
                                         <ul class="social-icon">
                                             <li><a href="https://www.facebook.com/" target="_blank"><i
                                                         class="fa-brands fa-facebook-f"></i></a></li>
@@ -309,12 +305,12 @@
                             <div class="swiper-slide">
                                 <div class="team-item">
                                     <a href="#" class="team-img">
-                                        <img src="{{asset('frontend/images/team/team3.jpg')}}" alt="team"
+                                        <img src="{{ asset('frontend/images/team/team3.jpg') }}" alt="team"
                                             class="img-fluid w-100">
                                     </a>
                                     <div class="team-content">
                                         <h4 class="mb-1"><a href="#">Michael Brown</a></h4>
-                                        <p>Frontend Developer</p>
+                                        <p>Market Analyst</p>
                                         <ul class="social-icon">
                                             <li><a href="https://www.facebook.com/" target="_blank"><i
                                                         class="fa-brands fa-facebook-f"></i></a></li>
@@ -331,12 +327,12 @@
                             <div class="swiper-slide">
                                 <div class="team-item">
                                     <a href="#" class="team-img">
-                                        <img src="{{asset('frontend/images/team/team4.jpg')}}" alt="team"
+                                        <img src="{{ asset('frontend/images/team/team4.jpg') }}" alt="team"
                                             class="img-fluid w-100">
                                     </a>
                                     <div class="team-content">
                                         <h4 class="mb-1"><a href="#">Sarah Williams</a></h4>
-                                        <p>Graphic Designer</p>
+                                        <p>Investment Advisor</p>
                                         <ul class="social-icon">
                                             <li><a href="https://www.facebook.com/" target="_blank"><i
                                                         class="fa-brands fa-facebook-f"></i></a></li>
@@ -355,18 +351,17 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
     <!--==========================  Team Section End  ==========================-->
 
-    
     <!--==========================  Testimonial Section Start  ==========================-->
     <section class="testimonial-section bg--black-two py-120">
         <div class="container position-relative">
             <div class="testimonial-shape d-none d-lg-block">
-                <img src="{{asset('frontend/svg/twostar.svg')}}" alt="star">
-                <img src="{{asset('frontend/svg/maneyPlant.svg')}}" alt="money Plant">
+                <img src="{{ asset('frontend/svg/twostar.svg') }}" alt="star">
+                <img src="{{ asset('frontend/svg/maneyPlant.svg') }}" alt="money Plant">
             </div>
             <div class="row row-gap-2">
                 <div class="col-lg-6 align-self-end">
@@ -392,17 +387,18 @@
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
                                     <div class="start-client">
-                                        <img src="{{asset('frontend/svg/star-5.svg')}}" alt="star">
+                                        <img src="{{ asset('frontend/svg/star-5.svg') }}" alt="star">
                                     </div>
                                     <div class="client-body">
-                                        <img src="{{asset('frontend/svg/quite.svg')}}" alt="quite">
+                                        <img src="{{ asset('frontend/svg/quite.svg') }}" alt="quite">
                                         <p class="client-text">
                                             Trade Mastery, we believes great traders aren't born they’re built
                                             through the rights there tools, education, and supports. Our mission
                                             is simple to empower every client.
                                         </p>
                                         <div class="client-info d-flex gap-3 align-self-center">
-                                            <img src="{{asset('frontend/images/client/client1.png')}}" alt="client">
+                                            <img src="{{ asset('frontend/images/client/client1.png') }}"
+                                                alt="client">
                                             <div class="text">
                                                 <h4 class="mb-2">Robert Jenkins</h4>
                                                 <p>Urban Designer</p>
@@ -414,17 +410,18 @@
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
                                     <div class="start-client">
-                                        <img src="{{asset('frontend/svg/star-5.svg')}}" alt="star">
+                                        <img src="{{ asset('frontend/svg/star-5.svg') }}" alt="star">
                                     </div>
                                     <div class="client-body">
-                                        <img src="{{asset('frontend/svg/quite.svg')}}" alt="quite">
+                                        <img src="{{ asset('frontend/svg/quite.svg') }}" alt="quite">
                                         <p class="client-text">
                                             Trade Mastery, we believes great traders aren't born they’re built
                                             through the rights there tools, education, and supports. Our mission
                                             is simple to empower every client.
                                         </p>
                                         <div class="client-info d-flex gap-3 align-self-center">
-                                            <img src="{{asset('frontend/images/client/client2.png')}}" alt="client">
+                                            <img src="{{ asset('frontend/images/client/client2.png') }}"
+                                                alt="client">
                                             <div class="text">
                                                 <h4 class="mb-2">Johanna Dach</h4>
                                                 <p>Urban Artist</p>
@@ -436,17 +433,18 @@
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
                                     <div class="start-client">
-                                        <img src="{{asset('frontend/svg/star-5.svg')}}" alt="star">
+                                        <img src="{{ asset('frontend/svg/star-5.svg') }}" alt="star">
                                     </div>
                                     <div class="client-body">
-                                        <img src="{{asset('frontend/svg/quite.svg')}}" alt="quite">
+                                        <img src="{{ asset('frontend/svg/quite.svg') }}" alt="quite">
                                         <p class="client-text">
                                             Trade Mastery, we believes great traders aren't born they’re built
                                             through the rights there tools, education, and supports. Our mission
                                             is simple to empower every client.
                                         </p>
                                         <div class="client-info d-flex gap-3 align-self-center">
-                                            <img src="{{asset('frontend/images/client/client3.png')}}" alt="client">
+                                            <img src="{{ asset('frontend/images/client/client3.png') }}"
+                                                alt="client">
                                             <div class="text">
                                                 <h4 class="mb-2">Harvey Witting</h4>
                                                 <p>Urban Designer</p>
@@ -458,17 +456,18 @@
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
                                     <div class="start-client">
-                                        <img src="{{asset('frontend/svg/star-5.svg')}}" alt="star">
+                                        <img src="{{ asset('frontend/svg/star-5.svg') }}" alt="star">
                                     </div>
                                     <div class="client-body">
-                                        <img src="{{asset('frontend/svg/quite.svg')}}" alt="quite">
+                                        <img src="{{ asset('frontend/svg/quite.svg') }}" alt="quite">
                                         <p class="client-text">
                                             Trade Mastery, we believes great traders aren't born they’re built
                                             through the rights there tools, education, and supports. Our mission
                                             is simple to empower every client.
                                         </p>
                                         <div class="client-info d-flex gap-3 align-self-center">
-                                            <img src="{{asset('frontend/images/client/client1.png')}}" alt="client">
+                                            <img src="{{ asset('frontend/images/client/client1.png') }}"
+                                                alt="client">
                                             <div class="text">
                                                 <h4 class="mb-2">Robert Jenkins</h4>
                                                 <p>Urban Designer</p>
@@ -480,17 +479,18 @@
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
                                     <div class="start-client">
-                                        <img src="{{asset('frontend/svg/star-5.svg')}}" alt="star">
+                                        <img src="{{ asset('frontend/svg/star-5.svg') }}" alt="star">
                                     </div>
                                     <div class="client-body">
-                                        <img src="{{asset('frontend/svg/quite.svg')}}" alt="quite">
+                                        <img src="{{ asset('frontend/svg/quite.svg') }}" alt="quite">
                                         <p class="client-text">
                                             Trade Mastery, we believes great traders aren't born they’re built
                                             through the rights there tools, education, and supports. Our mission
                                             is simple to empower every client.
                                         </p>
                                         <div class="client-info d-flex gap-3 align-self-center">
-                                            <img src="{{asset('frontend/images/client/client2.png')}}" alt="client">
+                                            <img src="{{ asset('frontend/images/client/client2.png') }}"
+                                                alt="client">
                                             <div class="text">
                                                 <h4 class="mb-2">Johanna Dach</h4>
                                                 <p>Urban Artist</p>

@@ -6,10 +6,31 @@
 </li>
 
 <li class="side-nav-item">
-    <a href="{{ route('chart') }}" class="side-nav-link">
+    <a data-bs-toggle="collapse" href="#trading" aria-expanded="false" aria-controls="trading" class="side-nav-link">
         <span class="menu-icon"><i class="ti ti-chart-line"></i></span>
-        <span class="menu-text"> Live Charts </span>
+        <span class="menu-text">
+            Trading
+        </span>
+        <span class="menu-arrow"></span>
     </a>
+    <div class="collapse" id="trading">
+        <ul class="sub-menu">
+            <li class="side-nav-item">
+                <a href="{{ route('chart') }}" class="side-nav-link">
+
+                    <span class="menu-text"> Live Charts </span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
+                <a href="{{ route('trading') }}" class="side-nav-link">
+
+                    <span class="menu-text"> Trading </span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
 </li>
 
 <li class="side-nav-item">
