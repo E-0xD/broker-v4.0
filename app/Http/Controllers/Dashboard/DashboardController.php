@@ -41,7 +41,6 @@ class DashboardController extends Controller
                 'totalActiveTrades'
             ));
         } catch (\Throwable $th) {
-            dd($th);
             Log::error($th);
             Alert::error('Error', 'An Error Occurred');
             return redirect()->route('home');

@@ -6,7 +6,7 @@
                     <div class="login-img-box order-lg-1">
                         <div class="text-center">
                             <span>Sign Up Your Account</span>
-                            <h3>Welcome To XTrady</h3>
+                            <h3>Welcome To {{config('app.name')}}</h3>
                             <a href="{{ route('register') }}" class="btn btn--base">
                                 Back To Home
                                 <i class="flaticon-arrow-upper-right"></i>

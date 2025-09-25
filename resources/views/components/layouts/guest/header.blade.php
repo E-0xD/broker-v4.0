@@ -1,7 +1,7 @@
    <header>
             <nav class="navbar navbar-expand-lg navbar-main">
                 <div class="container">
-                    <a class="navbar-brand" href="index-2.html">
+                    <a class="navbar-brand" href="{{route('home')}}">
                         <img src="{{asset(config('app.logo'))}}" width="100" alt="logo" class="logo-img">
                     </a>
                     <div class="right-nav">
@@ -35,10 +35,10 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="d-flex d-lg-none gap-4 pt-3 justify-content-center">
-                            <a href="login.html" class="btn btn-outline--base d-sm-none">
+                            <a href="{{route('login')}}" class="btn btn-outline--base d-sm-none">
                                 Log In <i class="flaticon-arrow-upper-right"></i>
                             </a>
-                            <a href="contact.html" class="btn btn--base-two d-sm-none">
+                            <a href="{{route('contact')}}" class="btn btn--base-two d-sm-none">
                                 Contact Us <i class="flaticon-arrow-upper-right"></i>
                             </a>
                         </div>

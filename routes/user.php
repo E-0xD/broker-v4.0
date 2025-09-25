@@ -3,6 +3,7 @@
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\DepositController;
 use App\Http\Controllers\Dashboard\InvestmentController;
+use App\Http\Controllers\Dashboard\ManualDepositController;
 use App\Http\Controllers\Dashboard\PlanController;
 use App\Http\Controllers\Dashboard\TransactionHistoryController;
 use App\Http\Controllers\Dashboard\WithdrawController;
@@ -16,8 +17,10 @@ Route::prefix('user')->middleware(['auth', 'check.status'])->group(function () {
 
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+    Route::post('deposit/manual', [ManualDepositController::class, 'store'])->name('deposit.manual.store');
     Route::get('deposit/callback', [DepositController::class, 'callback'])->name('deposit.callback');
     Route::resource('deposit', DepositController::class)->only(['create', 'store']);
+
 
     Route::resource('withdraw', WithdrawController::class)->only(['create', 'store']);
 

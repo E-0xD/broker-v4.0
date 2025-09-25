@@ -16,12 +16,29 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Admin User',
+            'email' => 'admin@test.com',
+            'password' => bcrypt('password'),
+            'role' => 'admin'
+        ]);
+
+        User::factory()->create([
+            'name' => 'Master Admin',
+            'email' => 'master@test.com',
+            'password' => bcrypt('password'),
+            'role' => 'master'
+        ]);
+
+        User::factory()->create([
+            'name' => 'Regular User',
+            'email' => 'user@test.com',
+            'password' => bcrypt('password'),
+            'role' => 'user'
         ]);
 
         $this->call([
             PlanSeeder::class,
+            DepositSettingSeeder::class,
         ]);
     }
 }

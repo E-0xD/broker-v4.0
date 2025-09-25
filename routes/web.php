@@ -1,12 +1,15 @@
 <?php
 
+use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\PageController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'frontend.welcome')->name('home');
 Route::view('about', 'frontend.about')->name('about');
 Route::view('contact', 'frontend.contact')->name('contact');
+Route::post('contact', [ContactController::class, 'store'])->name('contact.store');
 Route::view('privacy-policy', 'frontend.privacy-policy')->name('privacy');
-Route::view('pricing', 'frontend.pricing')->name('pricing');
+Route::get('pricing', [PageController::class, 'pricing'])->name('pricing');
 Route::view('terms', 'frontend.terms')->name('terms');
 Route::view('faq', 'frontend.faq')->name('faq');
 

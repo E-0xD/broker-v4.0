@@ -23,7 +23,7 @@
     <body>
 
         <!--==========================   Preloader Start  ==========================-->
-        <x-layouts.guest.preloader />
+        {{-- <x-layouts.guest.preloader /> --}}
         <!--==========================  Preloader End  ==========================-->
 
         <div class="wrapper">
@@ -47,7 +47,7 @@
         <x-layouts.guest.progress-wrap />
 
         <!-- Jquery js -->
-        {{-- <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> --}}
+        <script data-cfasync="false" src="{{ asset('frontend/js/email-decode.min.js') }}"></script>
         <script src="{{ asset('frontend/js/jquery-3.7.1.min.js') }}"></script>
         <!-- gsap Js -->
         <script src="{{ asset('frontend/js/gsap.min.js') }}"></script>
