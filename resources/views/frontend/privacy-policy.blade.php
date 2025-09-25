@@ -10,13 +10,13 @@
             <div class="row justify-content-center">
                 <div class="col-10">
                     <div class="privacy-content">
-                        <h2>XTrady Trading Privacy Policy</h2>
-                        <div class="last-updated pb-1">Last Updated: <strong class="text-white">20/05/2025</strong></div>
+                        <h2>{{config('app.name')}} Privacy Policy</h2>
+
 
                         <!-- Intro -->
                         <div class="section">
                             <p>
-                                At <strong>XTrady Trading</strong>, we are committed to protecting your privacy. This
+                                At <strong>{{config('app.name')}}</strong>, we are committed to protecting your privacy. This
                                 Privacy Policy explains
                                 how we collect, use, disclose, and safeguard your personal and financial information
                                 when you use our trading platform.

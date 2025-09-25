@@ -10,23 +10,23 @@
             <div class="row row-gap-5 justify-content-between">
                 <div class="col-lg-7 align-self-center">
                     <div class="banner-content">
-                        <h1 class="left-reveal">Experience Advanced <span class="text--base">Trading & Investment</span>
+                        <h1 class="">Experience Advanced <span class="text--base">Trading & Investment</span>
                             Solutions</h1>
-                        <p class="left-reveal fs-18 fw-medium">Access global markets, real-time trading, and
+                        <p class=" fs-18 fw-medium">Access global markets, real-time trading, and
                             professional investment opportunities. Start your journey to financial success with our
                             comprehensive platform.</p>
                         <div class="d-flex flex-wrap gap-4 mt-4">
-                            <a href="{{ route('register') }}" class="btn btn--base-two left-reveal">
+                            <a href="{{ route('register') }}" class="btn btn--base-two ">
                                 Create Account <i class="flaticon-arrow-upper-right"></i>
                             </a>
-                            <a href="{{ route('login') }}" class="btn btn-outline--base left-reveal">
+                            <a href="{{ route('login') }}" class="btn btn-outline--base ">
                                 Login Now <i class="flaticon-arrow-upper-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 align-self-center">
-                    <div class="banner-img scaleUp">
+                    <div class="banner-img">
                         <img src="{{ asset('frontend/images/banner/banner-img.png') }}" alt="Trading Platform"
                             class="img-fluid">
                     </div>
@@ -95,8 +95,8 @@
     <!--==========================  About Section End  ==========================-->
 
     <!--==========================  Services Section Start  ==========================-->
-    <section class="services-section bg--black py-120">
-        <div class="container position-relative">
+    <section class="services-section bg-dark py-120 ">
+        <div class="container position-relative ">
             <!-- Decorative Shapes -->
             <div class="services-shape d-none d-lg-block">
                 <img src="{{ asset('frontend/svg/balance-1.svg') }}" alt="decorative balance">
@@ -107,10 +107,10 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8">
                     <div class="section-content text-center">
-                        <h6 class="text-uppercase text-primary mb-3 top-reveal">Services</h6>
-                        <h2 class="fw-bold mb-4 top-reveal">Comprehensive Solutions <br class="d-none d-xl-block"> for
+                        <h6 class="text-uppercase text-primary mb-3 ">Services</h6>
+                        <h2 class="fw-bold mb-4 ">Comprehensive Solutions <br class="d-none d-xl-block"> for
                             Every Trader</h2>
-                        <p class="top-reveal">
+                        <p class="">
                             At <strong>{{ config('app.name') }}</strong>, we provide a full suite of trading services
                             designed to
                             equip you with the right tools, insights, and strategies to succeed in today’s dynamic
@@ -122,7 +122,7 @@
 
             <!-- Services Slider -->
             <div class="row mt-60 justify-content-center">
-                <div class="col-12 position-relative bottom-reveal">
+                <div class="col-12 position-relative ">
                     <div class="services-slider swiper">
                         <div class="swiper-wrapper">
                             <!-- Equity Trading -->
@@ -218,15 +218,15 @@
             </div>
             <div class="row row-gap-5">
                 <div class="col-xl-6 align-self-center">
-                    <div class="trade-img me-xl-4 scaleUp">
+                    <div class="trade-img me-xl-4">
                         <img src="{{ asset('frontend/images/trade/trade.png') }}" alt="trade" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-xl-6 align-self-center">
                     <div class="section-content">
-                        <h6 class="right-reveal">Trade Smarter With</h6>
-                        <h2 class="right-reveal">A Powerful, All-in-One Platform Designed for Every Investor</h2>
-                        <p class="right-reveal">
+                        <h6 class="">Trade Smarter With</h6>
+                        <h2 class="">A Powerful, All-in-One Platform Designed for Every Investor</h2>
+                        <p class="">
                             At {{ config('app.name') }}, we understand that successful traders are built, not born.
                             That’s why we provide an advanced platform equipped with innovative tools, real-time
                             insights,
@@ -235,14 +235,14 @@
                         </p>
                     </div>
                     <ul class="trade-list py-4 mt-2 mb-3">
-                        <li class="right-reveal">Full Forex Market Access</li>
-                        <li class="right-reveal">Trade Commodities & Indices</li>
-                        <li class="right-reveal">Live Market Data & Updates</li>
-                        <li class="right-reveal">Global Stocks & Equities</li>
-                        <li class="right-reveal">Wide Range of Crypto Pairs</li>
-                        <li class="right-reveal">Advanced Analytics & Charting</li>
+                        <li class="">Full Forex Market Access</li>
+                        <li class="">Trade Commodities & Indices</li>
+                        <li class="">Live Market Data & Updates</li>
+                        <li class="">Global Stocks & Equities</li>
+                        <li class="">Wide Range of Crypto Pairs</li>
+                        <li class="">Advanced Analytics & Charting</li>
                     </ul>
-                    <a href="{{ route('register') }}" class="btn btn--base-two right-reveal">
+                    <a href="{{ route('register') }}" class="btn btn--base-two ">
                         Sign Up Today <i class="flaticon-arrow-upper-right"></i>
                     </a>
                 </div>
@@ -257,25 +257,25 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="number-count">
-                        <div class="number-box left-reveal">
+                        <div class="number-box ">
                             <div class="fs-60 fw-bold">
                                 2.<span class="odometer" data-odometer-final="7">2</span>B
                             </div>
                             <p>Total Capital Invested</p>
                         </div>
-                        <div class="number-box left-reveal">
+                        <div class="number-box ">
                             <div class="fs-60 fw-bold">
                                 <span class="odometer" data-odometer-final="860">660</span>+
                             </div>
                             <p>Professional Traders</p>
                         </div>
-                        <div class="number-box left-reveal">
+                        <div class="number-box ">
                             <div class="fs-60 fw-bold">
                                 <span class="odometer" data-odometer-final="14">5</span>K
                             </div>
                             <p>Active Investors Worldwide</p>
                         </div>
-                        <div class="number-box left-reveal">
+                        <div class="number-box ">
                             <div class="fs-60 fw-bold">
                                 <span class="odometer" data-odometer-final="130">100</span>+
                             </div>
@@ -298,9 +298,9 @@
             <div class="row justify-content-center">
                 <div class="col-xxl-6 col-xl-7 col-lg-8">
                     <div class="section-content text-center">
-                        <h6 class="top-reveal">People Trust Us</h6>
-                        <h2 class="top-reveal">Trusted by Millions Worldwide</h2>
-                        <p class="top-reveal">{{ config('app.name') }} is built on transparency, innovation, and
+                        <h6 class="">People Trust Us</h6>
+                        <h2 class="">Trusted by Millions Worldwide</h2>
+                        <p class="">{{ config('app.name') }} is built on transparency, innovation, and
                             trust.
                             Our mission is simple: to equip every trader with the tools, insights, and support
                             they need to succeed in today’s dynamic markets.
@@ -311,19 +311,19 @@
             <div class="row">
                 <div class="col-lg-12 mt-5">
                     <ul class="nav nav-pills gap-4 justify-content-center" id="people-tab" role="tablist">
-                        <li class="nav-item bottom-reveal" role="presentation">
+                        <li class="nav-item " role="presentation">
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#people-one"
                                 role="tab">
                                 <i class="flaticon-cam-recorder"></i> Test Your Knowledge
                             </button>
                         </li>
-                        <li class="nav-item bottom-reveal" role="presentation">
+                        <li class="nav-item " role="presentation">
                             <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#people-two"
                                 role="tab">
                                 <i class="flaticon-live-1"></i> Live Commentary
                             </button>
                         </li>
-                        <li class="nav-item bottom-reveal" role="presentation">
+                        <li class="nav-item " role="presentation">
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#people-three"
                                 role="tab">
                                 <i class="flaticon-cam-recorder"></i> Tutorial Videos
@@ -333,17 +333,11 @@
                 </div>
 
                 <div class="col-12 mt-60">
-                    <div class="tab-content bottom-reveal" id="people-tabContent">
+                    <div class="tab-content " id="people-tabContent">
 
                         <!-- Tab One -->
                         <div class="tab-pane fade" id="people-one" role="tabpanel" tabindex="0">
-                            <a class="people-video video-container" href="https://www.youtube.com/watch?v=SjJhuZQlkbA"
-                                data-fancybox>
-                                <img src="{{ asset('frontend/images/video/video2.jpg') }}" alt="video">
-                                <div class="play-button">
-                                    <span class="play-icon"><i class="fa fa-solid fa-play"></i></span>
-                                </div>
-                            </a>
+
                             <div class="row mt-5 row-gap-5 justify-content-between">
                                 <div class="col-xl-5 col-lg-6">
                                     <div class="section-content">
@@ -367,13 +361,7 @@
 
                         <!-- Tab Two -->
                         <div class="tab-pane fade show active" id="people-two" role="tabpanel" tabindex="0">
-                            <a class="people-video video-container" href="https://www.youtube.com/watch?v=SjJhuZQlkbA"
-                                data-fancybox>
-                                <img src="{{ asset('frontend/images/video/video1.jpg') }}" alt="video">
-                                <div class="play-button">
-                                    <span class="play-icon"><i class="fa fa-solid fa-play"></i></span>
-                                </div>
-                            </a>
+
                             <div class="row mt-5 row-gap-5 justify-content-between">
                                 <div class="col-xl-5 col-lg-6">
                                     <div class="section-content">
@@ -413,13 +401,7 @@
 
                         <!-- Tab Three -->
                         <div class="tab-pane fade" id="people-three" role="tabpanel" tabindex="0">
-                            <a class="people-video video-container" href="https://www.youtube.com/watch?v=SjJhuZQlkbA"
-                                data-fancybox>
-                                <img src="{{ asset('frontend/images/video/video3.jpg') }}" alt="video">
-                                <div class="play-button">
-                                    <span class="play-icon"><i class="fa fa-solid fa-play"></i></span>
-                                </div>
-                            </a>
+
                             <div class="row mt-5 row-gap-5 justify-content-between">
                                 <div class="col-xl-5 col-lg-6">
                                     <div class="section-content">
@@ -473,13 +455,13 @@
             <div class="row row-gap-2">
                 <div class="col-lg-6 align-self-end">
                     <div class="section-content">
-                        <h6 class="right-reveal">Testimonial</h6>
-                        <h2 class="mb-2 right-reveal">What Our Clients Say</h2>
+                        <h6 class="">Testimonial</h6>
+                        <h2 class="mb-2 ">What Our Clients Say</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 align-self-end">
                     <div class="section-content">
-                        <p class="right-reveal">
+                        <p class="">
                             At {{ config('app.name') }}, we pride ourselves on helping traders achieve more with the
                             right tools, strategies, and support. Here’s what our clients have to say about their
                             journey with us.
@@ -488,7 +470,7 @@
                 </div>
             </div>
             <div class="row mt-60">
-                <div class="col-12 position-relative bottom-reveal">
+                <div class="col-12 position-relative ">
                     <div class="testimonial-slide swiper">
                         <div class="swiper-wrapper">
 
@@ -644,9 +626,9 @@
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-8">
                     <div class="section-content text-center">
-                        <h6 class="top-reveal">FAQ</h6>
-                        <h2 class="top-reveal">Answers to Common Questions</h2>
-                        <p class="top-reveal">
+                        <h6 class="">FAQ</h6>
+                        <h2 class="">Answers to Common Questions</h2>
+                        <p class="">
                             At <strong>{{ config('app.name') }}</strong>, we believe successful traders are made
                             through the right
                             tools, education,
@@ -659,13 +641,13 @@
 
             <div class="row mt-60 row-gap-5">
                 <div class="col-lg-6 align-self-center">
-                    <img src="{{ asset('frontend/images/faq/faq.png') }}" alt="faq" class="img-fluid scaleUp">
+                    <img src="{{ asset('frontend/images/faq/faq.png') }}" alt="faq" class="img-fluid">
                 </div>
                 <div class="col-lg-6 align-self-center">
                     <div class="accordion custom--accordion" id="faqExample">
 
                         <!-- FAQ 1 -->
-                        <div class="accordion-item bottom-reveal">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
@@ -683,7 +665,7 @@
                         </div>
 
                         <!-- FAQ 2 -->
-                        <div class="accordion-item bottom-reveal">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqTwo" aria-expanded="true" aria-controls="faqTwo">
@@ -702,7 +684,7 @@
                         </div>
 
                         <!-- FAQ 3 -->
-                        <div class="accordion-item bottom-reveal">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
@@ -720,7 +702,7 @@
                         </div>
 
                         <!-- FAQ 4 -->
-                        <div class="accordion-item bottom-reveal">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
@@ -738,7 +720,7 @@
                         </div>
 
                         <!-- FAQ 5 -->
-                        <div class="accordion-item bottom-reveal">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">

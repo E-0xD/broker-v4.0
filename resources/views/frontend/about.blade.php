@@ -5,7 +5,7 @@
     <!-- ==================== Breadcrumb End Here ==================== -->
 
     <!--==========================  About Section Start  ==========================-->
-    <section class="about-section bg-light py-5">
+    <section class="about-section bg--black-two py-5">
         <div class="container position-relative">
             <div class="row align-items-center gy-5">
 
@@ -72,101 +72,100 @@
                 </div>
             </div>
 
-            <div class="row gy-5">
-                <!-- Image -->
-                <div class="col-lg-6 text-center">
-                    <img src="{{ asset('frontend/images/faq/faq.png') }}" alt="FAQ illustration"
-                        class="img-fluid rounded shadow">
+              <div class="row mt-60 row-gap-5">
+                <div class="col-lg-6 align-self-center">
+                    <img src="{{ asset('frontend/images/faq/faq.png') }}" alt="faq" class="img-fluid">
                 </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="accordion custom--accordion" id="faqExample">
 
-                <!-- Accordion -->
-                <div class="col-lg-6">
-                    <div class="accordion" id="faqAccordion">
-
-                        <!-- Q1 -->
-                        <div class="accordion-item">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
-                                    <i class="fa fa-wallet me-2 text-primary"></i>
-                                    What is the minimum deposit to start trading?
+                                    What’s the minimum amount required to begin trading?
                                 </button>
                             </h2>
-                            <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#faqExample">
                                 <div class="accordion-body">
-                                    You can begin trading with as little as <strong>$100</strong>.
-                                    This allows you to test our platform with a modest investment
-                                    while exploring our features and tools.
+                                    <p>
+                                        You can start with as little as our platform’s entry-level deposit. We keep
+                                        barriers low so you can begin learning and trading without unnecessary pressure.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Q2 -->
-                        <div class="accordion-item">
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqTwo" aria-expanded="true" aria-controls="faqTwo">
-                                    <i class="fa fa-chalkboard-teacher me-2 text-primary"></i>
-                                    Do you offer a demo account for practice trading?
+                                    Can I practice on a demo account before trading live?
                                 </button>
                             </h2>
-                            <div id="faqTwo" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div id="faqTwo" class="accordion-collapse collapse show" data-bs-parent="#faqExample">
                                 <div class="accordion-body">
-                                    Yes! We provide a <strong>free demo account</strong> so you can
-                                    practice trading in real-time conditions without risking your capital.
+                                    <p>
+                                        Yes! We provide a free demo account where you can explore the platform, test
+                                        strategies, and build confidence before committing real funds.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Q3 -->
-                        <div class="accordion-item">
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
-                                    <i class="fa fa-laptop me-2 text-primary"></i>
-                                    What platforms can I use to trade with your broker?
+                                    Which platforms are available for trading?
                                 </button>
                             </h2>
-                            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqExample">
                                 <div class="accordion-body">
-                                    Our platform is accessible on <strong>web browsers, iOS, and Android apps</strong>,
-                                    ensuring you can trade anytime, anywhere.
+                                    <p>
+                                        Our services are accessible across web, desktop, and mobile apps, giving you the
+                                        flexibility to trade anytime, anywhere.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Q4 -->
-                        <div class="accordion-item">
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
-                                    <i class="fa fa-lock me-2 text-primary"></i>
-                                    Are my funds secure with your company?
+                                    How safe are my funds with {{ config('app.name') }}?
                                 </button>
                             </h2>
-                            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqExample">
                                 <div class="accordion-body">
-                                    Absolutely. We use <strong>bank-level encryption, segregated client accounts,
-                                        and regulatory compliance</strong> to keep your funds safe.
+                                    <p>
+                                        Security is our top priority. We use advanced encryption, strict compliance
+                                        measures, and trusted payment gateways to protect your funds at all times.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Q5 -->
-                        <div class="accordion-item">
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
-                                    <i class="fa fa-chart-line me-2 text-primary"></i>
-                                    What trading instruments do you offer?
+                                    Which markets and instruments can I trade?
                                 </button>
                             </h2>
-                            <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqExample">
                                 <div class="accordion-body">
-                                    We offer a wide range of markets including
-                                    <strong>cryptocurrencies, forex, commodities, indices, and stocks</strong>—giving
-                                    you
-                                    diverse opportunities to trade.
+                                    <p>
+                                        We offer a wide range of instruments including forex, cryptocurrencies, stocks,
+                                        indices, and commodities — giving you multiple opportunities to diversify your
+                                        portfolio.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -258,9 +257,9 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8">
                     <div class="section-content text-center">
-                        <h6 class="top-reveal">Our Team</h6>
-                        <h2 class="top-reveal">Meet Our Advisers</h2>
-                        <p class="top-reveal">Trade Mastery, we believe great traders aren't born they’re
+                        <h6 class="">Our Team</h6>
+                        <h2 class="">Meet Our Advisers</h2>
+                        <p class="">Trade Mastery, we believe great traders aren't born they’re
                             built through the
                             right tools, education, and support. Our mission is simple: to empower.</p>
                     </div>
@@ -336,28 +335,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="team-item">
-                                    <a href="#" class="team-img">
-                                        <img src="{{ asset('frontend/images/team/team4.jpg') }}" alt="team"
-                                            class="img-fluid w-100">
-                                    </a>
-                                    <div class="team-content">
-                                        <h4 class="mb-1"><a href="#">Sarah Williams</a></h4>
-                                        <p>Investment Advisor</p>
-                                        <ul class="social-icon">
-                                            <li><a href="https://www.facebook.com/" target="_blank"><i
-                                                        class="fa-brands fa-facebook-f"></i></a></li>
-                                            <li><a href="https://www.instagram.com/" target="_blank"><i
-                                                        class="fa-brands fa-instagram"></i></a></li>
-                                            <li><a href="https://www.linkedin.com/" target="_blank"><i
-                                                        class="fa-brands fa-linkedin-in"></i></a></li>
-                                            <li><a href="https://www.twitter.com/" target="_blank"><i
-                                                        class="fa-brands fa-x-twitter"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                      
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
@@ -368,128 +346,5 @@
     </section>
     <!--==========================  Team Section End  ==========================-->
 
-    <!--==========================  Testimonial Section Start  ==========================-->
-    <section class="testimonial-section bg--black-two  py-5">
-        <div class="container position-relative">
-
-            <!-- Section Heading -->
-            <div class="row gy-3 align-items-end">
-                <div class="col-lg-6">
-                    <div class="section-content">
-                        <h6 class="text-uppercase text-primary">
-                            <i class="fa fa-comments me-2"></i> Testimonials
-                        </h6>
-                        <h2 class="fw-bold mb-2">What Our Clients Say</h2>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <p class="text-muted">
-                        At <strong>Trade Mastery</strong>, our mission is to equip every trader with the right
-                        tools, knowledge, and support to succeed. Here’s what our clients are saying
-                        about their journey with us.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Slider -->
-            <div class="row mt-5">
-                <div class="col-12 position-relative">
-                    <div class="testimonial-slide swiper">
-                        <div class="swiper-wrapper">
-
-                            <!-- Testimonial 1 -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-item p-4 bg-white rounded shadow-sm">
-                                    <div class="mb-3">
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                    </div>
-                                    <p class="client-text fst-italic">
-                                        “The platform is intuitive and reliable. I started small, and within months
-                                        I felt confident in my trading decisions.”
-                                    </p>
-                                    <div class="client-info d-flex align-items-center mt-3">
-                                        <img src="{{ asset('frontend/images/client/client1.png') }}" alt="client"
-                                            class="rounded-circle" width="60">
-                                        <div class="ms-3">
-                                            <h5 class="mb-1">Robert Jenkins</h5>
-                                            <small class="text-muted">Urban Designer</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Testimonial 2 -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-item p-4 bg-white rounded shadow-sm">
-                                    <div class="mb-3">
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                    </div>
-                                    <p class="client-text fst-italic">
-                                        “The demo account gave me the confidence to move into live trading.
-                                        Their support team is fantastic.”
-                                    </p>
-                                    <div class="client-info d-flex align-items-center mt-3">
-                                        <img src="{{ asset('frontend/images/client/client2.png') }}" alt="client"
-                                            class="rounded-circle" width="60">
-                                        <div class="ms-3">
-                                            <h5 class="mb-1">Johanna Dach</h5>
-                                            <small class="text-muted">Digital Artist</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Testimonial 3 -->
-                            <div class="swiper-slide">
-                                <div class="testimonial-item p-4 bg-white rounded shadow-sm">
-                                    <div class="mb-3">
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                        <i class="fa fa-star text-warning"></i>
-                                    </div>
-                                    <p class="client-text fst-italic">
-                                        “Secure, transparent, and easy to use. Trade Mastery has changed
-                                        the way I look at investing.”
-                                    </p>
-                                    <div class="client-info d-flex align-items-center mt-3">
-                                        <img src="{{ asset('frontend/images/client/client3.png') }}" alt="client"
-                                            class="rounded-circle" width="60">
-                                        <div class="ms-3">
-                                            <h5 class="mb-1">Harvey Witting</h5>
-                                            <small class="text-muted">Financial Analyst</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- Pagination -->
-                        <div class="swiper-pagination mt-4"></div>
-                    </div>
-
-                    <!-- Slider Navigation -->
-                    <div class="slider-btn">
-                        <div class="btn-slider-prev testi-prev">
-                            <i class="fa fa-chevron-left"></i>
-                        </div>
-                        <div class="btn-slider-next testi-next">
-                            <i class="fa fa-chevron-right"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--==========================  Testimonial Section End  ==========================-->
 
 </x-layouts.guest>

@@ -95,10 +95,10 @@
 
                         <h4 class="mt-4">12. Contact Information</h4>
                         <p>
-                            {{ config('app.name') }} Trading<br>
-                            <i class="fa fa-envelope me-2"></i> Email: <a href="mailto:support@example.com"
-                                class="text-white">support@example.com</a><br>
-                            <i class="fa fa-phone me-2"></i> Phone: (+1) 824 394 4562
+                            {{ config('app.name') }}<br>
+                            <i class="fa fa-envelope me-2"></i> Email: <a href="mailto:{{config('mail.from.address')}}"
+                                class="text-white">{{config('mail.from.address')}}</a><br>
+                            <i class="fa fa-phone me-2"></i> Phone: {{config('app.phone')}}
                         </p>
                     </div>
                 </div>

@@ -13,9 +13,9 @@
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-8">
                     <div class="section-content text-center">
-                        <h6 class="top-reveal">FAQ</h6>
-                        <h2 class="top-reveal">Answers to Common Questions</h2>
-                        <p class="top-reveal">
+                        <h6 class="">FAQ</h6>
+                        <h2 class="">Answers to Common Questions</h2>
+                        <p class="">
                             At <strong>{{ config('app.name') }}</strong>, we believe successful traders are made through the right
                             tools, education,
                             and support. Our mission is simple: to empower you with the resources needed to trade
@@ -27,13 +27,13 @@
 
             <div class="row mt-60 row-gap-5">
                 <div class="col-lg-6 align-self-center">
-                    <img src="{{ asset('frontend/images/faq/faq.png') }}" alt="faq" class="img-fluid scaleUp">
+                    <img src="{{ asset('frontend/images/faq/faq.png') }}" alt="faq" class="img-fluid">
                 </div>
                 <div class="col-lg-6 align-self-center">
                     <div class="accordion custom--accordion" id="faqExample">
 
                         <!-- FAQ 1 -->
-                        <div class="accordion-item bottom-reveal">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
@@ -51,7 +51,7 @@
                         </div>
 
                         <!-- FAQ 2 -->
-                        <div class="accordion-item bottom-reveal">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqTwo" aria-expanded="true" aria-controls="faqTwo">
@@ -69,7 +69,7 @@
                         </div>
 
                         <!-- FAQ 3 -->
-                        <div class="accordion-item bottom-reveal">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
@@ -87,7 +87,7 @@
                         </div>
 
                         <!-- FAQ 4 -->
-                        <div class="accordion-item bottom-reveal">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
@@ -105,7 +105,7 @@
                         </div>
 
                         <!-- FAQ 5 -->
-                        <div class="accordion-item bottom-reveal">
+                        <div class="accordion-item ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
