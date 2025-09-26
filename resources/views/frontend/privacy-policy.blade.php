@@ -10,13 +10,12 @@
             <div class="row justify-content-center">
                 <div class="col-10">
                     <div class="privacy-content">
-                        <h2>{{ config('app.name') }} Trading Privacy Policy</h2>
-                        <div class="last-updated pb-1">Last Updated: <strong class="text-white">20/05/2025</strong></div>
+                        <h2>{{ config('app.name') }} Privacy Policy</h2>
 
                         <!-- Intro -->
                         <div class="section">
                             <p>
-                                At <strong>{{ config('app.name') }} Trading</strong>, we are committed to protecting your privacy. This
+                                At <strong>{{ config('app.name') }}</strong>, we are committed to protecting your privacy. This
                                 Privacy Policy explains
                                 how we collect, use, disclose, and safeguard your personal and financial information
                                 when you use our trading platform.
@@ -90,8 +89,7 @@
                                 <li>Request data portability</li>
                                 <li>Withdraw consent</li>
                             </ul>
-                            <p class="pt-3">To exercise these rights, contact our Data Protection Officer at [DPO
-                                email].</p>
+                            <p class="pt-3">To exercise these rights, contact our support team at {{config('mail.from.address')}}.</p>
                         </div>
 
                         <!-- 6 -->
@@ -133,7 +131,7 @@
                                 {{ config('app.name') }}<br>
                                 Email: <a
                                     href="mailto:{{ config('mail.from.address') }}">{{ config('mail.from.address') }}</a><br>
-                                Phone: (+1) 824 394 4562
+                                Phone: {{config('app.phone')}}
                             </p>
                         </div>
 
