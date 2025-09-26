@@ -25,12 +25,12 @@ class PaymentProcessorController extends Controller
 
     public function create(array $data)
     {
-
-        ['amount' => $amount, 'details' => $details, 'success_url' => $success_url, 'cancel_url' => $cancel_url] = $data;
-
-        $response = $this->cryptoPaymentProcessor->processPayment($amount, $success_url, $cancel_url);
-
         try {
+            ['amount' => $amount, 'details' => $details, 'success_url' => $success_url, 'cancel_url' => $cancel_url] = $data;
+
+            $response = $this->cryptoPaymentProcessor->processPayment($amount, $success_url, $cancel_url);
+
+
             $responseData = json_decode($response->getContent(), true);
 
 
@@ -63,9 +63,9 @@ class PaymentProcessorController extends Controller
     public function validate(Request $request)
     {
 
-        $response = $this->cryptoPaymentProcessor->validatePayment($request->NP_id);
-
         try {
+            $response = $this->cryptoPaymentProcessor->validatePayment($request->NP_id);
+
 
             $responseData = is_string($response) ? json_decode($response, true) : (method_exists($response, 'getContent') ? json_decode($response->getContent(), true) : $response);
 
