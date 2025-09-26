@@ -10,13 +10,13 @@
             <div class="row justify-content-center">
                 <div class="col-10">
                     <div class="privacy-content">
-                        <h2>{{config('app.name')}} Privacy Policy</h2>
-
+                        <h2>{{ config('app.name') }} Trading Privacy Policy</h2>
+                        <div class="last-updated pb-1">Last Updated: <strong class="text-white">20/05/2025</strong></div>
 
                         <!-- Intro -->
                         <div class="section">
                             <p>
-                                At <strong>{{config('app.name')}}</strong>, we are committed to protecting your privacy. This
+                                At <strong>{{ config('app.name') }} Trading</strong>, we are committed to protecting your privacy. This
                                 Privacy Policy explains
                                 how we collect, use, disclose, and safeguard your personal and financial information
                                 when you use our trading platform.
