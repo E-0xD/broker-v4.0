@@ -73,8 +73,9 @@
                          <form action="{{ route('logout') }}" method="POST"
                              class="dropdown-item active fw-semibold text-danger">
                              @csrf
-                             <i class="ti ti-logout me-1 fs-17 align-middle"></i>
-                             <button type="submit" class="align-middle">Sign Out</button>
+
+                             <button type="submit" class="align-middle btn btn-danger">
+                                 <i class="ti ti-logout me-1 fs-17 align-middle"></i>Sign Out</button>
                          </form>
                      </div>
                  </div>
