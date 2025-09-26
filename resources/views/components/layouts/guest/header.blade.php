@@ -1,4 +1,5 @@
    <header>
+      <div id="google_translate_element"></div>
             <nav class="navbar navbar-expand-lg navbar-main">
                 <div class="container">
                     <a class="navbar-brand" href="{{route('home')}}">
@@ -22,7 +23,7 @@
                             </svg>
                         </button>
 
-                                <div id="google_translate_element"></div>
+                              
                     </div>
 
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
@@ -66,4 +67,6 @@
                     </div>
                 </div>
             </nav>
+
+            
         </header>

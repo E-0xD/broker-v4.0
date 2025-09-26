@@ -16,9 +16,7 @@ class NewManualDeposit extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(public Transaction $transaction)
-    {
-    }
+    public function __construct(public Transaction $transaction) {}
 
     /**
      * Get the message envelope.
@@ -36,7 +34,7 @@ class NewManualDeposit extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.manual-deposit',
+            view: 'emails.manual-deposit',
             with: [
                 'transaction' => $this->transaction,
             ],

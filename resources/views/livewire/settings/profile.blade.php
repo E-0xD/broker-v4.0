@@ -10,7 +10,7 @@
 
                 <div class="card-body">
                     <p class="text-muted">
-                        short text here
+                        update your username and email
                     </p>
                     <div class="row">
 

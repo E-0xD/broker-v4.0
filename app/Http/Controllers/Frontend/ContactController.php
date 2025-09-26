@@ -23,7 +23,7 @@ class ContactController extends Controller
 
         try {
             Mail::to(config('mail.from.address'))->send(new ContactFormMail($validated));
-            Alert::sucecss('success', 'Your message has been sent successfully!');
+            Alert::success('success', 'Your message has been sent successfully!');
             return redirect()->back();
         } catch (\Exception $e) {
             Log::error($e);
