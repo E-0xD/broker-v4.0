@@ -3,7 +3,7 @@
     <x-layouts.app.breadcrum title="Live Chart" />
 
     <div class="row">
-        <div class="col-xxl-9">
+        <div class="col-12">
             <!-- Forex Chart -->
             <div class="mb-4">
                 <h5 class="mb-2">Live Forex Chart</h5>
