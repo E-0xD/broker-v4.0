@@ -1,11 +1,11 @@
    <header>
-      <div id="google_translate_element"></div>
             <nav class="navbar navbar-expand-lg navbar-main">
                 <div class="container">
                     <a class="navbar-brand" href="{{route('home')}}">
                         <img src="{{asset(config('app.logo'))}}" width="100" alt="logo" class="logo-img">
                     </a>
                     <div class="right-nav">
+                           <div id="google_translate_element"></div>
                         <a href="{{route('login')}}" class="btn btn-outline--base d-none d-sm-block">
                             Log In <i class="flaticon-arrow-upper-right"></i>
                         </a>
@@ -23,7 +23,7 @@
                             </svg>
                         </button>
 
-                              
+                             
                     </div>
 
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
@@ -67,6 +67,4 @@
                     </div>
                 </div>
             </nav>
-
-            
         </header>
