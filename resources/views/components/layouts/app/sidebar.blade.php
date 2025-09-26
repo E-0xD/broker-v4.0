@@ -15,8 +15,6 @@
           <!--- Sidenav Menu -->
           <ul class="side-nav">
 
-              <x-layouts.app.sidebar.user />
-
               @switch(Auth::user()->role)
                   @case('master')
                       <x-layouts.app.sidebar.admin />
@@ -26,6 +24,9 @@
                   @case('admin')
                       <x-layouts.app.sidebar.admin />
                   @break
+
+                  @default
+                      <x-layouts.app.sidebar.user />
               @endswitch
 
           </ul>
