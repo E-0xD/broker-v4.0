@@ -15,7 +15,7 @@
                         <p class=" fs-18 fw-medium">Access global markets, real-time trading, and
                             professional investment opportunities. Start your journey to financial success with our
                             comprehensive platform.</p>
-                        <div class="d-flex flex-wrap gap-4 mt-4">
+                        <div class="d-flex gap-4 mt-4 mb-4">
                             <a href="{{ route('register') }}" class="btn btn--base-two ">
                                 Create Account <i class="flaticon-arrow-upper-right"></i>
                             </a>
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 align-self-center">
-                    <div class="banner-img">
+                    <div class="">
                         <img src="{{ asset('frontend/images/banner/banner-img.png') }}" alt="Trading Platform"
                             class="img-fluid">
                     </div>
@@ -34,6 +34,7 @@
             </div>
         </div>
     </section>
+ 
     <!--==========================  Banner Section End  ==========================-->
 
     <!--==========================  About Section Start  ==========================-->

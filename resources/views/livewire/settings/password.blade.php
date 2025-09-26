@@ -10,7 +10,7 @@
 
                 <div class="card-body">
                     <p class="text-muted">
-                        short text here
+                        Update Your Password and Keep your account secure
                     </p>
                     <div class="row">
 

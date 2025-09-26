@@ -1,13 +1,24 @@
-<div>
-# New Contact Form Submission
+<!DOCTYPE html>
+<html lang="en">
 
-**Name:** {{ $formData['name'] }} {{ $formData['last_name'] }}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
 
-**Email:** {{ $formData['email'] }}
+    <body>
+        <h2>New Contact Form Submission</h2>
 
-**Phone:** {{ $formData['phone'] }}
+        <b>Name:</b> {{ $formData['name'] }} {{ $formData['last_name'] }}
+        <br>
+        <b>Email:</b> {{ $formData['email'] }}
+        <br>
+        <b>Phone:</b> {{ $formData['phone'] }}
+        <br>
 
-**Message:**
-{{ $formData['message'] }}
+        <b>Message:</b>
+        {{ $formData['message'] }}
+    </body>
 
-</div>
+</html>
