@@ -77,6 +77,8 @@ var colors = ["#727cf5", "#0acf97", "#fa5c7c", "#ffbc00"],
                 name: "Deposits",
                 type: "bar",
                 data: chartData.monthly.map(data => data.deposits),
+                
+            
             },
             {
                 name: "Withdrawals",
@@ -110,7 +112,7 @@ var colors = ["#727cf5", "#0acf97", "#fa5c7c", "#ffbc00"],
             min: 0,
             labels: {
                 formatter: function (o) {
-                    return o + "k";
+                    return o +' '+ chartData.currency;
                 },
             },
             axisBorder: { show: !1 },
@@ -138,7 +140,7 @@ var colors = ["#727cf5", "#0acf97", "#fa5c7c", "#ffbc00"],
             y: [
                 {
                     formatter: function (o) {
-                        return void 0 !== o ? chartData.currency + ' ' + o.toFixed(2) : o;
+                        return void 0 !== o ? + ' ' + o.toFixed(2) : o;
                     },
                 },
                 {
@@ -164,3 +166,5 @@ var colors = ["#727cf5", "#0acf97", "#fa5c7c", "#ffbc00"],
         options
     );
 chart.render();
+
+
