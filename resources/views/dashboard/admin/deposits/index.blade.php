@@ -23,7 +23,7 @@
                                     <tr>
                                         <td>{{ $deposit->id }}</td>
                                         <td>{{ $deposit->user->name }}</td>
-                                        <td>{{ number_format($deposit->amount, 2) }}</td>
+                                        <td>{{  $deposit->user->currency .' '. number_format($deposit->amount, 2) }}</td>
                                         <td>{{ $deposit->transaction_id }}</td>
                                         <td>
                                             <span

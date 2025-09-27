@@ -18,7 +18,7 @@
                         </div>
                         <div class="col-md-6">
                             <h5>Account Information</h5>
-                            <p><strong>Current Balance:</strong> ${{ number_format($user->balance) }}</p>
+                            <p><strong>Current Balance:</strong> {{$user->currency .' '. number_format($user->balance) }}</p>
 
                         </div>
                     </div>

@@ -32,8 +32,8 @@
 
                                 <div class="row justify-content-between align-items-center mt-3">
                                     <div class="col-12">
-                                        <p class="fs-5 mb-1">- Minimum Investment : {{ $plan->min_investment }}</p>
-                                        <p class="fs-5 mb-0">- Maximum Investment : {{ $plan->max_investment }}</p>
+                                        <p class="fs-5 mb-1">- Minimum Investment : {{Auth::user()->currency .' '. $plan->min_investment }}</p>
+                                        <p class="fs-5 mb-0">- Maximum Investment : {{Auth::user()->currency .' '. $plan->max_investment }}</p>
                                     </div>
                                 </div>
 
@@ -57,7 +57,7 @@
                                     @csrf
                                     <input type="hidden" name="plan_id" value="{{ $plan->id }}">
                                     <div class="col-12">
-                                        <h5 class="mb-3">Amount in USD</h5>
+                                        <h5 class="mb-3">Amount in {{Auth::user()->currency}}</h5>
                                         <div class="form-floating mb-3">
                                             <input value="{{ old('amount') }}" type="number" name="amount"
                                                 class="form-control" id="floatingInput" placeholder="1000000">

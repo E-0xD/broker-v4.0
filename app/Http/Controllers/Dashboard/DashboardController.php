@@ -52,9 +52,8 @@ class DashboardController extends Controller
         try {
             // Get monthly ROI data for the chart
             $monthlyData = Transaction::where('user_id', $userID)
-                ->where('type', TransactionType::ROI)
                 ->whereYear('created_at', now()->year)
-                ->selectRaw('MONTH(created_at) as month, SUM(amount) as total_roi, SUM(CASE WHEN type = "deposit" THEN amount ELSE 0 END) as deposits, SUM(CASE WHEN type = "withdrawal" THEN amount ELSE 0 END) as withdrawals')
+                ->selectRaw('MONTH(created_at) as month, SUM(CASE WHEN type = "roi" THEN amount ELSE 0 END) as total_roi, SUM(CASE WHEN type = "deposit" THEN amount ELSE 0 END) as deposits, SUM(CASE WHEN type = "withdrawal" THEN amount ELSE 0 END) as withdrawals')
                 ->groupBy('month')
                 ->orderBy('month')
                 ->get();

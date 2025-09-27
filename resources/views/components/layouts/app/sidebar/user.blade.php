@@ -13,6 +13,21 @@
 </li>
 
 <li class="side-nav-item">
+    <a href="{{ route('plan') }}" class="side-nav-link">
+        <span class="menu-icon"><i class="ti ti-cash"></i></span>
+        <span class="menu-text"> Investment Plans </span>
+    </a>
+</li>
+
+<li class="side-nav-item">
+    <a href="{{ route('investment.create') }}" class="side-nav-link">
+         <span class="menu-icon"><i class="ti ti-coin"></i></span>
+        <span class="menu-text"> Invest </span>
+    </a>
+</li>
+
+
+<li class="side-nav-item">
     <a href="{{ route('trading') }}" class="side-nav-link">
         <span class="menu-icon"><i class="ti ti-coins"></i></span>
         <span class="menu-text"> Trading </span>
