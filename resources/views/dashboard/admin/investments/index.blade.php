@@ -28,9 +28,9 @@
                                     <tr>
                                         <td>{{ $investment->user->name }}</td>
                                         <td>{{ $investment->plan->title }}</td>
-                                        <td>${{ number_format($investment->amount) }}</td>
-                                        <td>${{ number_format($investment->daily_earning, 2) }}</td>
-                                        <td>${{ number_format($investment->total_earned, 2) }}</td>
+                                        <td>{{$investment->user->currency .' '. number_format($investment->amount) }}</td>
+                                        <td>{{$investment->user->currency .' '. number_format($investment->daily_earning, 2) }}</td>
+                                        <td>{{$investment->user->currency .' '. number_format($investment->total_earned, 2) }}</td>
                                         <td>{{ ucfirst($investment->status) }}</td>
                                         <td>
                                             <button type="button" 
@@ -54,7 +54,7 @@
                                                     @csrf
                                                     <div class="modal-body">
                                                         <div class="mb-3">
-                                                            <label class="form-label">ROI Amount (USD)</label>
+                                                            <label class="form-label">ROI Amount</label>
                                                             <input type="number" step="0.01" name="roi_amount" class="form-control" required>
                                                         </div>
                                                     </div>

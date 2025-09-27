@@ -34,7 +34,7 @@
                             </div>
 
                             <div class="col-12">
-                                <h5 class="">Amount in USD</h5>
+                                <h5 class="">Amount in {{Auth::user()->currency}}</h5>
                                 <div class="form-floating mb-3">
                                     <input value="{{ old('amount') }}" type="number" name="amount"
                                         class="form-control" id="floatingAmount" placeholder="Enter amount">

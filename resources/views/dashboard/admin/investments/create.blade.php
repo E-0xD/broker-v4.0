@@ -15,7 +15,7 @@
                             <label class="form-label">Select User</label>
                             <select name="user_id" class="form-control" required>
                                 @foreach ($users as $user)
-                                    <option value="{{ $user->id }}">{{ $user->name }} (Balance: ${{ number_format($user->balance) }})</option>
+                                    <option value="{{ $user->id }}">{{ $user->name }} (Balance: {{$user->currency .' '.  number_format($user->balance) }})</option>
                                 @endforeach
                             </select>
                             @error('user_id')
@@ -36,7 +36,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Investment Amount (USD)</label>
+                            <label class="form-label">Investment Amount</label>
                             <input type="number" name="amount" class="form-control" required>
                             @error('amount')
                                 <span class="text-danger">{{ $message }}</span>

@@ -24,7 +24,7 @@
                                     <tr>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
-                                        <td>${{ number_format($user->balance) }}</td>
+                                        <td>{{$user->currency .' '. number_format($user->balance) }}</td>
                                         <td>
                                             <a href="{{ route('admin.users.show', $user) }}" 
                                                class="btn btn-info btn-sm">View Details</a>

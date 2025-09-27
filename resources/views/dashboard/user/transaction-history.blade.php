@@ -18,7 +18,7 @@
                         <tr>
                             <th scope="row">{{ $transaction->transaction_id }}</th>
                             <td>{{ $transaction->type }}</td>
-                            <td>${{ number_format($transaction->amount) }}</td>
+                            <td>{{Auth::user()->currency .' '. number_format($transaction->amount) }}</td>
                             <td>{{ $transaction->created_at }}</td>
                             <td
                                 class=" rounded-pill

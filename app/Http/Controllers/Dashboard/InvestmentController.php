@@ -71,7 +71,7 @@ class InvestmentController extends Controller
 
             // Validate investment amount against plan limits
             if ($request->amount < $plan->min_investment || $request->amount > $plan->max_investment) {
-                Alert::error('Error', 'Investment amount must be between $' . $plan->min_investment . ' and $' . $plan->max_investment);
+                Alert::error('Error', 'Investment amount must be between ' . Auth::user()->currency . $plan->min_investment .' and ' . Auth::user()->currency . $plan->max_investment);
                 return back();
             }
 
