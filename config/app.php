@@ -13,7 +13,13 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Investobloc Market'),
+    'email' => env('APP_NAME', 'support@investoblocmarket.com'),
+    'address' => env('APP_ADDRESS', 'Investobloc Market, 1234 Main Street, Anytown, CA 12345'),
+    'phone' => env('APP_PHONE', '(123) 456-7890'),
+    'logo' => env('APP_LOGO', 'assets/images/favicon.png'),
+    'logo_front' => env('APP_LOGO_FRONT', 'assets/images/logo_front.png'),
+    'favicon' => env('APP_FAVICON', 'assets/images/logo.png'),
 
     /*
     |--------------------------------------------------------------------------
@@ -121,20 +127,5 @@ return [
     'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
-    ],
-
-    'address' => env('APP_ADDRESS'),
-
-    'phone' => env('APP_PHONE'),
-
-    'city' => env('APP_CITY'),
-
-
-    'logo' => env('APP_LOGO'),
-
-    'favicon' => env('APP_FAVICON'),
-
-    'description' => env('APP_DESCRIPTION'),
-
-
+    ]
 ];
