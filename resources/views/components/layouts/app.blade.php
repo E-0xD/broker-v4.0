@@ -31,7 +31,6 @@
             <x-layouts.app.header />
             <!-- Topbar End -->
 
-
             <!-- ============================================================== -->
             <!-- Start Page Content here -->
             <!-- ============================================================== -->
@@ -72,6 +71,7 @@
 
         @include('sweetalert::alert')
 
+        @include('partials.live_chat')
     </body>
 
 </html>

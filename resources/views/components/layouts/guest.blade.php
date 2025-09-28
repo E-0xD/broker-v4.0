@@ -66,6 +66,8 @@
         <!-- main js -->
         <script src="{{ asset('frontend/js/main.js') }}"></script>
         @include('sweetalert::alert')
+
+        @include('partials.live_chat')
     </body>
 
 </html>

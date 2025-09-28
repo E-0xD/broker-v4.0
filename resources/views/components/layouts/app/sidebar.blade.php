@@ -29,8 +29,6 @@
                       <x-layouts.app.sidebar.user />
               @endswitch
 
-              #[XGGCaj6r4g7hm%
-
           </ul>
 
           <div class="clearfix"></div>

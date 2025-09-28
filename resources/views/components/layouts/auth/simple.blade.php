@@ -18,5 +18,7 @@
             </div>
         </div>
         @fluxScripts
+
+        @include('partials.live_chat')
     </body>
 </html>
