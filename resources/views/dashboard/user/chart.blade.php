@@ -9,7 +9,6 @@
                 <h5 class="mb-2">Live Forex Chart</h5>
                 <div class="tradingview-widget-container">
                     <div id="forex_chart"></div>
-                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                     <script type="text/javascript">
                         new TradingView.widget({
                             "width": "100%",

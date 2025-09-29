@@ -16,7 +16,7 @@
 
         <!-- Icons css -->
         <link href="{{ asset('dashboard/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     </head>
 
     <body>
